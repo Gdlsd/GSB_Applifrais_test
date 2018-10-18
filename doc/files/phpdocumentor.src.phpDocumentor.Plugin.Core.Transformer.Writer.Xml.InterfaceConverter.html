@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>GSBappDoc</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+        $('#source-view').on('shown', function () {
+            loadExternalCodeSnippets();
+        })
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">GSBappDoc</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/App.html">\App</a></li>
+                                                        <li><a href="../namespaces/Cilex.html">\Cilex</a></li>
+                                                        <li><a href="../namespaces/phpDocumentor.html">\phpDocumentor</a></li>
+                                                        <li><a href="../namespaces/Pimple.html">\Pimple</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">955</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">30</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-507901698"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-507901698" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2077909393"></a>
+                                <a href="../namespaces/App.html" style="margin-left: 30px; padding-left: 0">App</a>
+            </div>
+            <div id="namespace-2077909393" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/App.Kernel.html">Kernel</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2110041922"></a>
+                                <a href="../namespaces/Cilex.html" style="margin-left: 30px; padding-left: 0">Cilex</a>
+            </div>
+            <div id="namespace-2110041922" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Cilex.Application.html">Application</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-737471520"></a>
+                                <a href="../namespaces/phpDocumentor.html" style="margin-left: 30px; padding-left: 0">phpDocumentor</a>
+            </div>
+            <div id="namespace-737471520" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2047150260"></a>
+                                <a href="../namespaces/phpDocumentor.Application.html" style="margin-left: 30px; padding-left: 0">Application</a>
+            </div>
+            <div id="namespace-2047150260" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-866995862"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Builder.html" style="margin-left: 30px; padding-left: 0">Builder</a>
+            </div>
+            <div id="namespace-866995862" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Builder.AssemblerFactoryFactory.html">AssemblerFactoryFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1899882457"></a>
+                                <a href="../namespaces/phpDocumentor.Application.CilexCompatibilityLayer.html" style="margin-left: 30px; padding-left: 0">CilexCompatibilityLayer</a>
+            </div>
+            <div id="namespace-1899882457" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1590984185"></a>
+                                <a href="../namespaces/phpDocumentor.Application.CilexCompatibilityLayer.DependencyInjection.html" style="margin-left: 30px; padding-left: 0">DependencyInjection</a>
+            </div>
+            <div id="namespace-1590984185" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.CilexCompatibilityLayer.DependencyInjection.CilexCompatibilityLayerExtension.html">CilexCompatibilityLayerExtension</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.CilexCompatibilityLayer.CilexCompatibilityLayerBundle.html">CilexCompatibilityLayerBundle</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-97132035"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Configuration.html" style="margin-left: 30px; padding-left: 0">Configuration</a>
+            </div>
+            <div id="namespace-97132035" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-353541201"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Configuration.Factory.html" style="margin-left: 30px; padding-left: 0">Factory</a>
+            </div>
+            <div id="namespace-353541201" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Application.Configuration.Factory.Strategy.html">Strategy</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Configuration.Factory.Version2.html">Version2</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Configuration.Factory.Version3.html">Version3</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Configuration.CommandlineOptionsMiddleware.html">CommandlineOptionsMiddleware</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Configuration.ConfigurationFactory.html">ConfigurationFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-794515622"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Console.html" style="margin-left: 30px; padding-left: 0">Console</a>
+            </div>
+            <div id="namespace-794515622" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1550210792"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Console.Command.html" style="margin-left: 30px; padding-left: 0">Command</a>
+            </div>
+            <div id="namespace-1550210792" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-416193818"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Console.Command.Phar.html" style="margin-left: 30px; padding-left: 0">Phar</a>
+            </div>
+            <div id="namespace-416193818" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Console.Command.Phar.UpdateCommand.html">UpdateCommand</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-955948808"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Console.Command.Project.html" style="margin-left: 30px; padding-left: 0">Project</a>
+            </div>
+            <div id="namespace-955948808" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Console.Command.Project.ParseCommand.html">ParseCommand</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Console.Command.Project.RunCommand.html">RunCommand</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Console.Command.Project.TransformCommand.html">TransformCommand</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2003976202"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Console.Command.Template.html" style="margin-left: 30px; padding-left: 0">Template</a>
+            </div>
+            <div id="namespace-2003976202" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Console.Command.Template.ListCommand.html">ListCommand</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Console.Command.Command.html">Command</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1716451808"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
+            </div>
+            <div id="namespace-1716451808" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Parser.CacheFactory.html">CacheFactory</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Parser.ProjectFactoryFactory.html">ProjectFactoryFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1979718402"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Stage.html" style="margin-left: 30px; padding-left: 0">Stage</a>
+            </div>
+            <div id="namespace-1979718402" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1206250826"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Stage.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
+            </div>
+            <div id="namespace-1206250826" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Stage.Parser.ConfigureCache.html">ConfigureCache</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Stage.Configure.html">Configure</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Stage.Transform.html">Transform</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-217729004"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Transformer.html" style="margin-left: 30px; padding-left: 0">Transformer</a>
+            </div>
+            <div id="namespace-217729004" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1689339051"></a>
+                                <a href="../namespaces/phpDocumentor.Application.Transformer.Template.html" style="margin-left: 30px; padding-left: 0">Template</a>
+            </div>
+            <div id="namespace-1689339051" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.Transformer.Template.PathResolverFactory.html">PathResolverFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.PipelineFactory.html">PipelineFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1571005445"></a>
+                                <a href="../namespaces/phpDocumentor.Compiler.html" style="margin-left: 30px; padding-left: 0">Compiler</a>
+            </div>
+            <div id="namespace-1571005445" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-573023982"></a>
+                                <a href="../namespaces/phpDocumentor.Compiler.Pass.html" style="margin-left: 30px; padding-left: 0">Pass</a>
+            </div>
+            <div id="namespace-573023982" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.ClassTreeBuilder.html">ClassTreeBuilder</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.Debug.html">Debug</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.ElementsIndexBuilder.html">ElementsIndexBuilder</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.ExampleTagsEnricher.html">ExampleTagsEnricher</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.InterfaceTreeBuilder.html">InterfaceTreeBuilder</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.MarkerFromTagsExtractor.html">MarkerFromTagsExtractor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.NamespaceTreeBuilder.html">NamespaceTreeBuilder</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Pass.PackageTreeBuilder.html">PackageTreeBuilder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Compiler.CompilerPassInterface.html">CompilerPassInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Compiler.Compiler.html">Compiler</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-354366187"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.html" style="margin-left: 30px; padding-left: 0">Descriptor</a>
+            </div>
+            <div id="namespace-354366187" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1723718855"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Builder.html" style="margin-left: 30px; padding-left: 0">Builder</a>
+            </div>
+            <div id="namespace-1723718855" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1534207367"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.html" style="margin-left: 30px; padding-left: 0">Reflector</a>
+            </div>
+            <div id="namespace-1534207367" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2004024058"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Builder.Reflector.Tags.html" style="margin-left: 30px; padding-left: 0">Tags</a>
+            </div>
+            <div id="namespace-2004024058" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.AuthorAssembler.html">AuthorAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.DeprecatedAssembler.html">DeprecatedAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ExampleAssembler.html">ExampleAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.GenericTagAssembler.html">GenericTagAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.LinkAssembler.html">LinkAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.MethodAssembler.html">MethodAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ParamAssembler.html">ParamAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.PropertyAssembler.html">PropertyAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ReturnAssembler.html">ReturnAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SeeAssembler.html">SeeAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SinceAssembler.html">SinceAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ThrowsAssembler.html">ThrowsAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.UsesAssembler.html">UsesAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VarAssembler.html">VarAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VersionAssembler.html">VersionAssembler</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ArgumentAssembler.html">ArgumentAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.AssemblerAbstract.html">AssemblerAbstract</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ClassAssembler.html">ClassAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.ConstantAssembler.html">ConstantAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.FileAssembler.html">FileAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.FunctionAssembler.html">FunctionAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.InterfaceAssembler.html">InterfaceAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.MethodAssembler.html">MethodAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.NamespaceAssembler.html">NamespaceAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.PropertyAssembler.html">PropertyAssembler</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.Reflector.TraitAssembler.html">TraitAssembler</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerInterface.html">AssemblerInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerAbstract.html">AssemblerAbstract</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Builder.AssemblerFactory.html">AssemblerFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-142782976"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-142782976" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Cache.ProjectDescriptorMapper.html">ProjectDescriptorMapper</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1238675789"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Example.html" style="margin-left: 30px; padding-left: 0">Example</a>
+            </div>
+            <div id="namespace-1238675789" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Example.Finder.html">Finder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1673760914"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1673760914" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Exception.MissingDependencyException.html">MissingDependencyException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1915203039"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Filter.html" style="margin-left: 30px; padding-left: 0">Filter</a>
+            </div>
+            <div id="namespace-1915203039" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Filter.Filterable.html">Filterable</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Filter.ClassFactory.html">ClassFactory</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Filter.Filter.html">Filter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Filter.StripIgnore.html">StripIgnore</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Filter.StripInternal.html">StripInternal</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Filter.StripOnVisibility.html">StripOnVisibility</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-791465262"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-791465262" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ArgumentInterface.html">ArgumentInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ChildInterface.html">ChildInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ClassInterface.html">ClassInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ConstantInterface.html">ConstantInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ContainerInterface.html">ContainerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ElementInterface.html">ElementInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.FileInterface.html">FileInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.FunctionInterface.html">FunctionInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.InterfaceInterface.html">InterfaceInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.MethodInterface.html">MethodInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.NamespaceInterface.html">NamespaceInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.PackageInterface.html">PackageInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.ProjectInterface.html">ProjectInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.PropertyInterface.html">PropertyInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.TraitInterface.html">TraitInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.TypeInterface.html">TypeInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Descriptor.Interfaces.VisibilityInterface.html">VisibilityInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1451365940"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.ProjectDescriptor.html" style="margin-left: 30px; padding-left: 0">ProjectDescriptor</a>
+            </div>
+            <div id="namespace-1451365940" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ProjectDescriptor.Settings.html">Settings</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-866413570"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Tag.html" style="margin-left: 30px; padding-left: 0">Tag</a>
+            </div>
+            <div id="namespace-866413570" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-966791042"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Tag.BaseTypes.html" style="margin-left: 30px; padding-left: 0">BaseTypes</a>
+            </div>
+            <div id="namespace-966791042" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.BaseTypes.TypedVariableAbstract.html">TypedVariableAbstract</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.AuthorDescriptor.html">AuthorDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.DeprecatedDescriptor.html">DeprecatedDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.ExampleDescriptor.html">ExampleDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.LinkDescriptor.html">LinkDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.MethodDescriptor.html">MethodDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.ParamDescriptor.html">ParamDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.PropertyDescriptor.html">PropertyDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.ReturnDescriptor.html">ReturnDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.SeeDescriptor.html">SeeDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.SinceDescriptor.html">SinceDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.ThrowsDescriptor.html">ThrowsDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.UsesDescriptor.html">UsesDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.VarDescriptor.html">VarDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Tag.VersionDescriptor.html">VersionDescriptor</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-682140198"></a>
+                                <a href="../namespaces/phpDocumentor.Descriptor.Type.html" style="margin-left: 30px; padding-left: 0">Type</a>
+            </div>
+            <div id="namespace-682140198" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Type.BooleanDescriptor.html">BooleanDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Type.CollectionDescriptor.html">CollectionDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Type.FloatDescriptor.html">FloatDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Type.IntegerDescriptor.html">IntegerDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Type.StringDescriptor.html">StringDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Type.UnknownTypeDescriptor.html">UnknownTypeDescriptor</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ArgumentDescriptor.html">ArgumentDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ClassDescriptor.html">ClassDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.Collection.html">Collection</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ConstantDescriptor.html">ConstantDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.DescriptorAbstract.html">DescriptorAbstract</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.FileDescriptor.html">FileDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.FunctionDescriptor.html">FunctionDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.InterfaceDescriptor.html">InterfaceDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.MethodDescriptor.html">MethodDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.NamespaceDescriptor.html">NamespaceDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.PackageDescriptor.html">PackageDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ProjectAnalyzer.html">ProjectAnalyzer</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ProjectDescriptor.html">ProjectDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html">ProjectDescriptorBuilder</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.PropertyDescriptor.html">PropertyDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.TagDescriptor.html">TagDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Descriptor.TraitDescriptor.html">TraitDescriptor</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1593861974"></a>
+                                <a href="../namespaces/phpDocumentor.DomainModel.html" style="margin-left: 30px; padding-left: 0">DomainModel</a>
+            </div>
+            <div id="namespace-1593861974" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1871155533"></a>
+                                <a href="../namespaces/phpDocumentor.DomainModel.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
+            </div>
+            <div id="namespace-1871155533" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.DomainModel.Parser.FileCollector.html">FileCollector</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.DomainModel.Path.html">Path</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.DomainModel.Uri.html">Uri</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1186284085"></a>
+                                <a href="../namespaces/phpDocumentor.Event.html" style="margin-left: 30px; padding-left: 0">Event</a>
+            </div>
+            <div id="namespace-1186284085" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Event.DebugEvent.html">DebugEvent</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Event.Dispatcher.html">Dispatcher</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Event.EventAbstract.html">EventAbstract</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Event.LogEvent.html">LogEvent</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-95153635"></a>
+                                <a href="../namespaces/phpDocumentor.Infrastructure.html" style="margin-left: 30px; padding-left: 0">Infrastructure</a>
+            </div>
+            <div id="namespace-95153635" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-803717480"></a>
+                                <a href="../namespaces/phpDocumentor.Infrastructure.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-803717480" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Infrastructure.Cache.ZendCacheFactory.html">ZendCacheFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1105442439"></a>
+                                <a href="../namespaces/phpDocumentor.Infrastructure.JmsSerializer.html" style="margin-left: 30px; padding-left: 0">JmsSerializer</a>
+            </div>
+            <div id="namespace-1105442439" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Infrastructure.JmsSerializer.FileCache.html">FileCache</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1590221676"></a>
+                                <a href="../namespaces/phpDocumentor.Infrastructure.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
+            </div>
+            <div id="namespace-1590221676" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Infrastructure.Parser.FlySystemCollector.html">FlySystemCollector</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Infrastructure.Parser.FlySystemFile.html">FlySystemFile</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Infrastructure.Parser.SpecificationFactory.html">SpecificationFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Infrastructure.FileSystemFactory.html">FileSystemFactory</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Infrastructure.SpecificationFactory.html">SpecificationFactory</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Infrastructure.FlySystemFactory.html">FlySystemFactory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-454945676"></a>
+                                <a href="../namespaces/phpDocumentor.Parser.html" style="margin-left: 30px; padding-left: 0">Parser</a>
+            </div>
+            <div id="namespace-454945676" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-70858258"></a>
+                                <a href="../namespaces/phpDocumentor.Parser.Event.html" style="margin-left: 30px; padding-left: 0">Event</a>
+            </div>
+            <div id="namespace-70858258" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Event.PreFileEvent.html">PreFileEvent</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-200779880"></a>
+                                <a href="../namespaces/phpDocumentor.Parser.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-200779880" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Exception.FilesNotFoundException.html">FilesNotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Exception.MissingDependencyException.html">MissingDependencyException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-126243804"></a>
+                                <a href="../namespaces/phpDocumentor.Parser.Middleware.html" style="margin-left: 30px; padding-left: 0">Middleware</a>
+            </div>
+            <div id="namespace-126243804" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Middleware.CacheMiddleware.html">CacheMiddleware</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Middleware.EmittingMiddleware.html">EmittingMiddleware</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Middleware.ErrorHandlingMiddleware.html">ErrorHandlingMiddleware</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Middleware.StopwatchMiddleware.html">StopwatchMiddleware</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Exception.html">Exception</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Parser.Parser.html">Parser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-427514650"></a>
+                                <a href="../namespaces/phpDocumentor.Partials.html" style="margin-left: 30px; padding-left: 0">Partials</a>
+            </div>
+            <div id="namespace-427514650" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1541442404"></a>
+                                <a href="../namespaces/phpDocumentor.Partials.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1541442404" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Partials.Exception.MissingNameForPartialException.html">MissingNameForPartialException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Partials.Collection.html">Collection</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Partials.Partial.html">Partial</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Partials.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1165312710"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.html" style="margin-left: 30px; padding-left: 0">Plugin</a>
+            </div>
+            <div id="namespace-1165312710" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1727306043"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.html" style="margin-left: 30px; padding-left: 0">Core</a>
+            </div>
+            <div id="namespace-1727306043" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2089001645"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.html" style="margin-left: 30px; padding-left: 0">Transformer</a>
+            </div>
+            <div id="namespace-2089001645" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-251275693"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.html" style="margin-left: 30px; padding-left: 0">Behaviour</a>
+            </div>
+            <div id="namespace-251275693" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1449334236"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.html" style="margin-left: 30px; padding-left: 0">Tag</a>
+            </div>
+            <div id="namespace-1449334236" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.AuthorTag.html">AuthorTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.CoversTag.html">CoversTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.IgnoreTag.html">IgnoreTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.InternalTag.html">InternalTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.LicenseTag.html">LicenseTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.MethodTag.html">MethodTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ParamTag.html">ParamTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.PropertyTag.html">PropertyTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ReturnTag.html">ReturnTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.UsesTag.html">UsesTag</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.VarTag.html">VarTag</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1317548184"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.html" style="margin-left: 30px; padding-left: 0">Writer</a>
+            </div>
+            <div id="namespace-1317548184" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1530827894"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html" style="margin-left: 30px; padding-left: 0">Xml</a>
+            </div>
+            <div id="namespace-1530827894" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ArgumentConverter.html">ArgumentConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ConstantConverter.html">ConstantConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.DocBlockConverter.html">DocBlockConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.InterfaceConverter.html">InterfaceConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.MethodConverter.html">MethodConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.PropertyConverter.html">PropertyConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TagConverter.html">TagConverter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TraitConverter.html">TraitConverter</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Checkstyle.html">Checkstyle</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.FileIo.html">FileIo</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Pathfinder.html">Pathfinder</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Sourcecode.html">Sourcecode</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Statistics.html">Statistics</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html">Xml</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-890483884"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Core.Xslt.html" style="margin-left: 30px; padding-left: 0">Xslt</a>
+            </div>
+            <div id="namespace-890483884" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Xslt.Extension.html">Extension</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.Exception.html">Exception</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Core.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-654853707"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Graphs.html" style="margin-left: 30px; padding-left: 0">Graphs</a>
+            </div>
+            <div id="namespace-654853707" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1909368553"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Graphs.Writer.html" style="margin-left: 30px; padding-left: 0">Writer</a>
+            </div>
+            <div id="namespace-1909368553" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Graphs.Writer.Graph.html">Graph</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Graphs.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1052732149"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.html" style="margin-left: 30px; padding-left: 0">LegacyNamespaceConverter</a>
+            </div>
+            <div id="namespace-1052732149" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.LegacyNamespaceFilter.html">LegacyNamespaceFilter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.LegacyNamespaceConverter.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-264891560"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.html" style="margin-left: 30px; padding-left: 0">Scrybe</a>
+            </div>
+            <div id="namespace-264891560" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1243463703"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Command.html" style="margin-left: 30px; padding-left: 0">Command</a>
+            </div>
+            <div id="namespace-1243463703" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-309824602"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Command.Manual.html" style="margin-left: 30px; padding-left: 0">Manual</a>
+            </div>
+            <div id="namespace-309824602" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.BaseConvertCommand.html">BaseConvertCommand</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToHtmlCommand.html">ToHtmlCommand</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToLatexCommand.html">ToLatexCommand</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToPdfCommand.html">ToPdfCommand</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-723263914"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.html" style="margin-left: 30px; padding-left: 0">Converter</a>
+            </div>
+            <div id="namespace-723263914" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1817222048"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Definition.html" style="margin-left: 30px; padding-left: 0">Definition</a>
+            </div>
+            <div id="namespace-1817222048" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Definition.html">Definition</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Factory.html">Factory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-864660413"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-864660413" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Exception.ConverterNotFoundException.html">ConverterNotFoundException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-703420186"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.html" style="margin-left: 30px; padding-left: 0">Format</a>
+            </div>
+            <div id="namespace-703420186" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-82910586"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-82910586" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.FormatNotFoundException.html">FormatNotFoundException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Collection.html">Collection</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Format.html">Format</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1570541587"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.html" style="margin-left: 30px; padding-left: 0">Metadata</a>
+            </div>
+            <div id="namespace-1570541587" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1810952494"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html" style="margin-left: 30px; padding-left: 0">TableOfContents</a>
+            </div>
+            <div id="namespace-1810952494" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.BaseEntry.html">BaseEntry</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Heading.html">Heading</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Module.html">Module</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Assets.html">Assets</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Glossary.html">Glossary</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html">TableOfContents</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1926179831"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html" style="margin-left: 30px; padding-left: 0">RestructuredText</a>
+            </div>
+            <div id="namespace-1926179831" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1966324162"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.html" style="margin-left: 30px; padding-left: 0">Directives</a>
+            </div>
+            <div id="namespace-1966324162" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.CodeBlock.html">CodeBlock</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Figure.html">Figure</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Image.html">Image</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Toctree.html">Toctree</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1878778534"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.html" style="margin-left: 30px; padding-left: 0">Roles</a>
+            </div>
+            <div id="namespace-1878778534" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.Doc.html">Doc</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-978767420"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.html" style="margin-left: 30px; padding-left: 0">Visitors</a>
+            </div>
+            <div id="namespace-978767420" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Creator.html">Creator</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Discover.html">Discover</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Document.html">Document</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.ToHtml.html">ToHtml</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ConverterInterface.html">ConverterInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToHtmlInterface.html">ToHtmlInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToLatexInterface.html">ToLatexInterface</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.ToPdfInterface.html">ToPdfInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Converter.Factory.html">Factory</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-160270538"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Scrybe.Template.html" style="margin-left: 30px; padding-left: 0">Template</a>
+            </div>
+            <div id="namespace-160270538" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Plugin.Scrybe.Template.TemplateInterface.html">TemplateInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Template.Factory.html">Factory</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.Template.Twig.html">Twig</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Scrybe.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1933837944"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Twig.html" style="margin-left: 30px; padding-left: 0">Twig</a>
+            </div>
+            <div id="namespace-1933837944" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-291366243"></a>
+                                <a href="../namespaces/phpDocumentor.Plugin.Twig.Writer.html" style="margin-left: 30px; padding-left: 0">Writer</a>
+            </div>
+            <div id="namespace-291366243" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Twig.Writer.Twig.html">Twig</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Plugin.Twig.ExtensionInterface.html">ExtensionInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Twig.Extension.html">Extension</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Twig.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Parameter.html">Parameter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.Plugin.html">Plugin</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Plugin.ServiceProvider.html">ServiceProvider</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-797717344"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.html" style="margin-left: 30px; padding-left: 0">Transformer</a>
+            </div>
+            <div id="namespace-797717344" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-567650312"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Behaviour.html" style="margin-left: 30px; padding-left: 0">Behaviour</a>
+            </div>
+            <div id="namespace-567650312" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Behaviour.BehaviourAbstract.html">BehaviourAbstract</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Behaviour.Collection.html">Collection</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-872221755"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Event.html" style="margin-left: 30px; padding-left: 0">Event</a>
+            </div>
+            <div id="namespace-872221755" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Event.PostTransformationEvent.html">PostTransformationEvent</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Event.PostTransformEvent.html">PostTransformEvent</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Event.PreTransformationEvent.html">PreTransformationEvent</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Event.PreTransformEvent.html">PreTransformEvent</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Event.PreXslWriterEvent.html">PreXslWriterEvent</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Event.WriterInitializationEvent.html">WriterInitializationEvent</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-492527172"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-492527172" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Exception.MissingDependencyException.html">MissingDependencyException</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Exception.UnknownWriter.html">UnknownWriter</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1619353048"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Router.html" style="margin-left: 30px; padding-left: 0">Router</a>
+            </div>
+            <div id="namespace-1619353048" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-232558549"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Router.Matcher.html" style="margin-left: 30px; padding-left: 0">Matcher</a>
+            </div>
+            <div id="namespace-232558549" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Transformer.Router.Matcher.MatcherInterface.html">MatcherInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1599310975"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.html" style="margin-left: 30px; padding-left: 0">UrlGenerator</a>
+            </div>
+            <div id="namespace-1599310975" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2108207467"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Router.UrlGenerator.Standard.html" style="margin-left: 30px; padding-left: 0">Standard</a>
+            </div>
+            <div id="namespace-2108207467" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ClassDescriptor.html">ClassDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ConstantDescriptor.html">ConstantDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FileDescriptor.html">FileDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FqsenDescriptor.html">FqsenDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FunctionDescriptor.html">FunctionDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.MethodDescriptor.html">MethodDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.NamespaceDescriptor.html">NamespaceDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PackageDescriptor.html">PackageDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PropertyDescriptor.html">PropertyDescriptor</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.QualifiedNameToUrlConverter.html">QualifiedNameToUrlConverter</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Transformer.Router.UrlGenerator.UrlGeneratorInterface.html">UrlGeneratorInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.ExternalRouter.html">ExternalRouter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.ForFileProxy.html">ForFileProxy</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.Queue.html">Queue</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.Renderer.html">Renderer</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.RouterAbstract.html">RouterAbstract</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.Rule.html">Rule</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Router.StandardRouter.html">StandardRouter</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1540246173"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Template.html" style="margin-left: 30px; padding-left: 0">Template</a>
+            </div>
+            <div id="namespace-1540246173" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Template.Collection.html">Collection</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Template.Factory.html">Factory</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Template.Parameter.html">Parameter</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Template.PathResolver.html">PathResolver</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-762620344"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Writer.html" style="margin-left: 30px; padding-left: 0">Writer</a>
+            </div>
+            <div id="namespace-762620344" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1179440050"></a>
+                                <a href="../namespaces/phpDocumentor.Transformer.Writer.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1179440050" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Writer.Exception.RequirementMissing.html">RequirementMissing</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Transformer.Writer.Initializable.html">Initializable</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Transformer.Writer.Routable.html">Routable</a></li>
+                                                    <li class="interface"><a href="../classes/phpDocumentor.Transformer.Writer.Translatable.html">Translatable</a></li>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Writer.Collection.html">Collection</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Writer.WriterAbstract.html">WriterAbstract</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Exception.html">Exception</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Template.html">Template</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Transformation.html">Transformation</a></li>
+                                                    <li class="class"><a href="../classes/phpDocumentor.Transformer.Transformer.html">Transformer</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-87950335"></a>
+                                <a href="../namespaces/phpDocumentor.Translator.html" style="margin-left: 30px; padding-left: 0">Translator</a>
+            </div>
+            <div id="namespace-87950335" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Translator.Translator.html">Translator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/phpDocumentor.Application.html">Application</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-397974367"></a>
+                                <a href="../namespaces/Pimple.html" style="margin-left: 30px; padding-left: 0">Pimple</a>
+            </div>
+            <div id="namespace-397974367" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Pimple.ServiceProviderInterface.html">ServiceProviderInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Pimple.Container.html">Container</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/PdoGsb.html">PdoGsb</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+                    <h1><small></small>InterfaceConverter.php</h1>
+                    <p><em>phpDocumentor</em></p>
+                    <p>PHP Version 5.3</p>
+
+                    
+                    
+                                        <h2>Classes</h2>
+                    <table class="table table-hover">
+                                            <tr>
+                            <td><a href="../classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.InterfaceConverter.html">InterfaceConverter</a></td>
+                            <td><em>Converter used to create an XML Element representing the interface and its Constants, Methods and DocBlock.</em></td>
+                        </tr>
+                                        </table>
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                        
+                                                                                    <dt>See also</dt>
+                                                                                        <dd><a href="http://phpdoc.org"><div class="namespace-wrapper">http://phpdoc.org</div></a></dd>
+                                                    
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr>
+                                <th>
+                                    copyright
+                                </th>
+                                <td>
+                                                                            <p>2010-2018 Mike van Riel / Naenius (<a href="http://www.naenius.com">http://www.naenius.com</a>)</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    license
+                                </th>
+                                <td>
+                                                                            <p><a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a> MIT</p>
+                                                                    </td>
+                            </tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label"></h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/phpdocumentor\src\phpDocumentor\Plugin\Core\Transformer\Writer\Xml\InterfaceConverter.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/App.html">\App</a></li>
+                                                                            <li><a href="../namespaces/Cilex.html">\Cilex</a></li>
+                                                                            <li><a href="../namespaces/phpDocumentor.html">\phpDocumentor</a></li>
+                                                                            <li><a href="../namespaces/Pimple.html">\Pimple</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on October 18th, 2018 at 09:26.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
