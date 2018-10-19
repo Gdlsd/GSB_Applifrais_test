@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Classe d'accès aux données.
  *
@@ -49,7 +50,7 @@ class PdoGsb
      * Constructeur privé, crée l'instance de PDO qui sera sollicitée
      * pour toutes les méthodes de la classe
      */
-    private function __construct()
+    public function __construct()
     {
         PdoGsb::$monPdo = new PDO(
             PdoGsb::$serveur . ';' . PdoGsb::$bdd,
