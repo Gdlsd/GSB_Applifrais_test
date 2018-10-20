@@ -23,7 +23,15 @@ $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);
 if ($uc && !$estConnecte) {
     $uc = 'connexion';
 } elseif (empty($uc)) {
-    $uc = 'accueil';
+    
+    if(isset($_SESSION['idVisiteur']))
+    {
+        $uc = 'accueil';
+    }else
+    {
+        $uc = 'accueilComptable';
+    }
+    
 }
 switch ($uc) {
 case 'connexion':
@@ -31,6 +39,9 @@ case 'connexion':
     break;
 case 'accueil':
     include 'controleurs/c_accueil.php';
+    break;
+case 'accueilComptable':
+    include 'controleurs/c_accueilComptable.php';
     break;
 case 'gererFrais':
     include 'controleurs/c_gererFrais.php';

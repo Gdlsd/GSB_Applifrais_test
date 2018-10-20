@@ -21,7 +21,13 @@
  */
 function estConnecte()
 {
-    return isset($_SESSION['idVisiteur']);
+    if(isset($_SESSION['idVisiteur'])){
+        return true;
+    }else if (isset($_SESSION['idComptable'])){
+        return true;
+    }
+    return false;
+    
 }
 
 /**
@@ -40,6 +46,12 @@ function connecter($idVisiteur, $nom, $prenom)
     $_SESSION['prenom'] = $prenom;
 }
 
+function connecterComptable($idComptable, $nom, $prenom)
+{
+    $_SESSION['idComptable'] = $idComptable;
+    $_SESSION['nom'] = $nom;
+    $_SESSION['prenom'] = $prenom;
+}
 /**
  * Détruit la session active
  *
