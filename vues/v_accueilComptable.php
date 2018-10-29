@@ -36,12 +36,12 @@
                     <div class="col-xs-12 col-md-12">
                         <a href="index.php?uc=gererFrais&action=saisirFrais"
                            class="btn btn-success btn-lg" role="button">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                            <br>Renseigner la fiche de frais</a>
+                            <span class="glyphicon glyphicon-ok"></span>
+                            <br>Valider fiches de frais</a>
                         <a href="index.php?uc=etatFrais&action=selectionnerMois"
                            class="btn btn-primary btn-lg" role="button">
-                            <span class="glyphicon glyphicon-list-alt"></span>
-                            <br>Afficher mes fiches de frais</a>
+                            <span class="glyphicon glyphicon-euro"></span>
+                            <br>Suivre le paiement des fiches de frais</a>
                     </div>
                 </div>
             </div>

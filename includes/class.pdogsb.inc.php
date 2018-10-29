@@ -106,6 +106,37 @@ class PdoGsb
     }
     
     /**
+     * Retourne une liste de nom et prénoms de l'ensemble des visiteurs
+     */
+    public function getListeVisiteur()
+    {
+        $requete = PdoGsb::$monPdo->query(
+            'SELECT * FROM visiteur'
+            );
+        return $requete->fetchAll();
+    }
+    
+    /**
+     * Retourne l'id d'un visiteur
+     * 
+     * @param String $nom Nom du visiteur
+     * @param String $prenom Prenom du visiteur
+     * 
+     */
+    public function getIdVisiteur($nom, $prenom)
+    {
+        $requetePrepare->prepare(
+                'SELECT visiteur.id '
+                . 'FROM visiteur '
+                . 'WERE nom = :nom AND prenom = :prenom'
+                );
+        $requetePrepare->bindParam(':nom', $nom, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':prenom', $prenom, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        return $requetePrepare->fetch();
+    }
+    
+    /**
      * Retourne les informations d'un comptable
      *
      * @param String $login Login du comptable
