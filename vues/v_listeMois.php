@@ -13,7 +13,7 @@
  * @version   GIT: <0>
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
-if(empty($_SESSION['idComptable'])){?>
+if($uc !== 'validerFrais' ){?>
 <h2>Mes fiches de frais</h2>
 <div class="row">
     <div class="col-md-4">
@@ -25,8 +25,9 @@ if(empty($_SESSION['idComptable'])){?>
         <form action="index.php?uc=etatFrais&action=voirEtatFrais" 
               method="post" role="form">
             <div class="form-group">
-<?php }?>                
+                
                 <label for="lstMois" accesskey="n">Mois : </label>
+<?php }?>
                 <select id="lstMois" name="lstMois" class="form-control">
                     <?php
                     foreach ($lesMois as $unMois) {
@@ -47,12 +48,13 @@ if(empty($_SESSION['idComptable'])){?>
                     }
                     ?>    
                 </select>              
-                
+<?php if($uc !== 'validerFrais' ){?>              
             </div>
             <input id="ok" type="submit" value="Valider" class="btn btn-success" 
                    role="button">
             <input id="annuler" type="reset" value="Effacer" class="btn btn-danger" 
                    role="button">
+<?php }?>  
         </form>
     </div>
 </div>

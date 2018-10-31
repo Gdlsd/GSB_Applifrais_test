@@ -1,7 +1,7 @@
 <?php declare(strict_types=1) ?>
 <?php
 /**
- * Vue Entête
+ * Vue Entête Comptable
  *
  * PHP Version 7
  *
@@ -50,33 +50,18 @@
                                     Accueil
                                 </a>
                             </li>
-                            <li <?php if ($uc == 'gererFrais') { ?>class="active"<?php } ?>> 
-                                <?php if(isset($_SESSION['idComptable'])){?>                    
+                            <li <?php if ($uc == 'validerFrais') { ?>class="active"<?php } ?>>                  
                                 <a href="index.php?uc=validerFrais&action=afficherListeVisiteurMois">
                                     <span class="glyphicon glyphicon-ok"></span>
                                     Valider les fiches de frais
                                 </a>                                    
-                                <?php } else { ?>  
-                                <a href="index.php?uc=gererFrais&action=saisirFrais">
-                                    <span class="glyphicon glyphicon-pencil"></span>
-                                    Renseigner la fiche de frais
-                                </a>
-                                <?php } ?>                                
                             </li>
                             
-                            <li <?php if ($uc == 'etatFrais') { ?>class="active"<?php } ?>>
-                                <?php if(isset($_SESSION['idComptable'])){?>
-                                <a href="index.php?uc=etatFrais&action=selectionMois">
+                            <li <?php if ($uc == 'suivrePaiementFrais') { ?>class="active"<?php } ?>>
+                                <a href="index.php?uc=&action=">
                                     <span class="glyphicon glyphicon-euro"></span>
                                     Suivre le paiement des fiches de frais
                                 </a>                                       
-                                <?php } else { ?>
-                                <a href="index.php?uc=etatFrais&action=selectionnerMois">
-                                    <span class="glyphicon glyphicon-list-alt"></span>
-                                    Afficher mes fiches de frais
-                                </a>
-                                <?php } ?>
-
                             </li>
                             <li 
                             <?php if ($uc == 'deconnexion') { ?>class="active"<?php } ?>>
@@ -100,3 +85,4 @@
                 </h1>
                 <?php
             }
+            ?>

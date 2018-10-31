@@ -111,7 +111,9 @@ class PdoGsb
     public function getListeVisiteur()
     {
         $requete = PdoGsb::$monPdo->query(
-            'SELECT * FROM visiteur'
+            'SELECT visiteur.id AS id, visiteur.nom AS nom,'
+            . 'visiteur.prenom AS prenom '
+            . ' FROM visiteur'
             );
         return $requete->fetchAll();
     }

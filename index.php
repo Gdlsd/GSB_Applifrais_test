@@ -18,7 +18,15 @@ require_once 'includes/class.pdogsb.inc.php';
 session_start();
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
-require 'vues/v_entete.php';
+if(isset($_SESSION['idVisiteur']))
+{
+    require 'vues/v_entete.php';
+}
+else
+{
+    require 'vues/v_enteteComptable.php';
+}
+
 $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);
 if ($uc && !$estConnecte) {
     $uc = 'connexion';
