@@ -25,10 +25,10 @@ if($uc !== 'validerFrais' ){?>
         <form action="index.php?uc=etatFrais&action=voirEtatFrais" 
               method="post" role="form">
             <div class="form-group">
-                
+              
                 <label for="lstMois" accesskey="n">Mois : </label>
-<?php }?>
                 <select id="lstMois" name="lstMois" class="form-control">
+<?php }?>  
                     <?php
                     foreach ($lesMois as $unMois) {
                         $mois = $unMois['mois'];
@@ -55,6 +55,6 @@ if($uc !== 'validerFrais' ){?>
             <input id="annuler" type="reset" value="Effacer" class="btn btn-danger" 
                    role="button">
 <?php }?>  
-        </form>
+        </form>        
     </div>
 </div>

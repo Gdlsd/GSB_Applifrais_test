@@ -108,6 +108,31 @@ function getMois($date)
     return $annee . $mois;
 }
 
+/**
+ * Retourne le mois suivant au format aaaamm selon le mois en cours
+ *
+ * @param String $date au format aaaamm 
+ */
+function getMoisSuivant($date)
+{
+    $annee = (int)substr($date, 0, 4);
+    $mois = (int)substr($date,4, 2 );
+ 
+    if($mois < 12)
+    {
+        $mois += 1;
+    }
+    else
+    {
+        $mois = 1;
+        $annee += 1;
+    }
+    
+    return $annee . $mois;
+}
+
+
+
 /* gestion des erreurs */
 
 /**
@@ -258,4 +283,19 @@ function nbErreurs()
     } else {
         return count($_REQUEST['erreurs']);
     }
+}
+
+/**
+ * Ajoute le libellé d'un message de succes au tableau des "succes"
+ *
+ * @param String $msg Libellé du succes
+ *
+ * @return null
+ */
+function ajouterSucces($msg)
+{
+    if (!isset($_REQUEST['succes'])) {
+        $_REQUEST['succes'] = array();
+    }
+    $_REQUEST['succes'][] = $msg;
 }

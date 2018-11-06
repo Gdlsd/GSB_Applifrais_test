@@ -15,6 +15,7 @@
  */
 
 $idVisiteur = $_SESSION['idVisiteur'];
+
 $mois = getMois(date('d/m/Y'));
 $numAnnee = substr($mois, 0, 4);
 $numMois = substr($mois, 4, 2);
@@ -56,7 +57,12 @@ case 'supprimerFrais':
     $pdo->supprimerFraisHorsForfait($idFrais);
     break;
 }
+
+
 $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur, $mois);
 $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $mois);
+
 require 'vues/v_listeFraisForfait.php';
 require 'vues/v_listeFraisHorsForfait.php';
+
+
