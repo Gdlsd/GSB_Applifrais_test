@@ -18,7 +18,7 @@
                     <div class="col-md-2">    
                         <select id="lstVisiteurs" title="visiteur" name="lstVisiteurs" class="form-control"
                                 onchange="this.form.submit();">
-                            <option selected disabled>Coisir un visiteur</option>
+                            <option selected disabled>Choisir un visiteur</option>
                                 <?php
                                 foreach ($lesVisiteurs as $unVisiteur) {
                                     $id = $unVisiteur['id'];
@@ -51,7 +51,7 @@
          <div class="col-md-2">
              <select id="lstMois" name="lstMois" class="form-control"
                      onchange="this.form.submit()">
-             <option selected disabled>Coisir un mois</option>
+             <option selected disabled>Choisir un mois</option>
         <?php     
            include 'v_listeMois.php'; 
            echo '</div>';           

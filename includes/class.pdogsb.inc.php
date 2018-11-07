@@ -288,7 +288,42 @@ class PdoGsb
             $requetePrepare->execute();
         }
     }
-
+    
+    /**
+     * Met à jour la table ligneFraisHorsForfait avec les données passées en paramètres
+     * 
+     * @param string $idFrais
+     * @param string $idVisiteur
+     * @param string $mois
+     * @param string $libelle
+     * @param string $dateFrais
+     * @param string $montant
+     * 
+     * @return null
+     */
+    public function majLigneFraisHorsForfait($idFrais, $idVisiteur, $mois, $libelle, 
+            $dateFrais, $montant)
+    {
+        $dateFraisAnglais = dateFrancaisVersAnglais($dateFrais);
+        
+        $requetePrepare = PdoGSB::$monPdo->prepare(
+                'UPDATE lignefraishorsforfait '
+                . 'SET lignefraishorsforfait.date = :uneDate, '
+                    .  'lignefraishorsforfait.libelle = :unLibelle, '                    
+                    .  'lignefraishorsforfait.montant = :unMontant '
+                . 'WHERE lignefraishorsforfait.idvisiteur = :unVisiteur '
+                . 'AND lignefraishorsforfait.mois = :unMois '
+                . 'AND lignefraishorsforfait.id = :idFrais'
+                );
+        $requetePrepare->bindParam(':uneDate', $dateFraisAnglais, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unLibelle', $libelle, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMontant', $montant, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':idFrais', $idFrais, PDO::PARAM_STR);
+        $requetePrepare->execute();
+    }
+    
     /**
      * Met à jour le nombre de justificatifs de la table ficheFrais
      * pour le mois et le visiteur concerné
@@ -543,4 +578,28 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
+    
+    public function getLibelleEtat($idVisiteur, $mois){
+        
+        $requetePrepare = PdoGSB::$monPdo->prepare(
+            'SELECT etat.libelle '
+                . 'FROM etat JOIN fichefrais ON etat.id = fichefrais.idetat '
+                . 'WHERE fichefrais.idvisiteur = :unIdVisiteur '
+                . 'AND fichefrais.mois = :unMois'                
+        );
+        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        
+        $libelleEtat = $requetePrepare->fetch();
+        return $libelleEtat;        
+    }
 }
+
+/* 
+
+
+ * 
+ * 
+ * url = https://Gdlsd@github.com/THUNBRD/ppe_GSB_MVCapp.git
+*/

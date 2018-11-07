@@ -2,6 +2,7 @@
 <div class="container">  
     <hr>
     <h1> Validation des fiches de frais </h1>
+    <?php echo 'Statut : ' . $libelleEtat['libelle']; ?>
     <hr>
     
     <div class="row">
@@ -35,8 +36,12 @@
                             <?php
                         }
                         ?>
-                        <button class="btn btn-success" type="submit">Corriger</button>
-                        <button class="btn btn-danger" type="reset">Réinitialiser</button>
+                        <button class="btn btn-success" type="submit">Corriger
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button class="btn btn-danger" type="reset">Réinitialiser
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </button>
                     </fieldset>
                 </form>
             </div>
@@ -76,28 +81,20 @@
                                      <input name="idFrais" value="<?php echo $id; ?>" 
                                             type="hidden">
                                      
-                                <td> <input type="text" 
-                                            id ="dateFraisHf" 
-                                            name="dateFraisHf"
-                                            class="form-control"
-                                            value="<?php echo $date ?>"></td>
-                                <td> <input type="text"
-                                            id="libelleFraisHf"
-                                            name="libelleFraisHf"
-                                            class="form-control"
-                                            value="<?php echo $libelle ?>"</td>
-                                <td><input type="text"
-                                           id="montantFraisHf"
-                                           name="montantFraisHf"
-                                           class="form-control"
-                                           value="<?php echo $montant ?>"</td>
-                                <td>
-                                    <button class="btn btn-warning" type="submit" name="repporterFiche" value="repporterFiche">Repporter</button>
-                                    <button class="btn btn-danger" type="submit" name="refuserFiche" value="refuserFiche">Refuser</button>                           
+                                <td> <?php echo $date ?></td>
+                                <td> <?php echo $libelle ?></td>
+                                <td><?php echo $montant ?></td>
+                                <td>  
+                                    <button class="btn btn-sm btn-danger" type="submit" name="refuserFiche" value="refuserFiche">Refuser
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                    
+                                    <button class="btn btn-sm btn-warning" type="submit" name="repporterFiche" value="repporterFiche">Repporter
+                                    <span class="infobulle glyphicon glyphicon-share-alt" aria-label="Repporter ce frais"></span>
+                                    </button>                          
                                 </td>
                                 </form>
                             </tr>
-
                             <?php
                         }
                         ?>
@@ -106,4 +103,14 @@
                 </div>
         </div>
     </div>
+    
+    <hr>
+        <form method="post" action="index.php?uc=validerFrais&action=validerFicheFrais" role="form">
+        <input name="lstVisiteurs" value="<?php echo $idVisiteur; ?>" type="hidden">
+        <input name="lstMois" value="<?php echo $idMois; ?>" type="hidden">
+        <button class="btn btn-lg btn-success center-block" type="submit" name="validerFiche" value="validerFiche">Valider la fiche de frais
+        <span class="glyphicon glyphicon-ok"></span>
+        </form>
 </div>
+
+                                    
