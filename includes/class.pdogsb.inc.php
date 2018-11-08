@@ -595,12 +595,3 @@ class PdoGsb
         return $libelleEtat;        
     }
 }
-
-/* 
-
-
- * 
- * THBD@users.noreply.github.com
- * 
- * url = https://Gdlsd@github.com/THUNBRD/ppe_GSB_MVCapp.git
-*/
