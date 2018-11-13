@@ -241,7 +241,8 @@ class PdoGsb
         $requetePrepare->execute();
         return $requetePrepare->fetchAll();
     }
-
+    
+    
     /**
      * Retourne tous les id de la table FraisForfait
      *
@@ -542,7 +543,8 @@ class PdoGsb
             . 'fichefrais.datemodif as dateModif,'
             . 'fichefrais.nbjustificatifs as nbJustificatifs, '
             . 'fichefrais.montantvalide as montantValide, '
-            . 'etat.libelle as libEtat '
+            . 'fichefrais.refus as refus, '
+            . 'etat.libelle as libEtat, '                
             . 'FROM fichefrais '
             . 'INNER JOIN etat ON fichefrais.idetat = etat.id '
             . 'WHERE fichefrais.idvisiteur = :unIdVisiteur '
@@ -555,6 +557,23 @@ class PdoGsb
         return $laLigne;
     }
 
+    /**
+     * Notifie le refus d'une fiche de frais et passe la valeur "refus" à 1
+     * 
+     * @param type $idVisiteur
+     * @param type $mois
+     */
+    public function refusLigneFraisHF($unFrais)
+    {
+        $requetePrepare = PdoGSB::$monPdo->prepare(
+                'UPDATE  lignefraishorsforfait '
+                . 'SET refus = 1 '
+                . 'WHERE lignefraishorsforfait.id = :unFrais'
+        );
+        $requetePrepare->bindParam(':unFrais', $unFrais, PDO::PARAM_STR);
+        $requetePrepare->execute();
+    }
+    
     /**
      * Modifie l'état et la date de modification d'une fiche de frais.
      * Modifie le champ idEtat et met la date de modif à aujourd'hui.
@@ -578,4 +597,19 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
+    
+    /**
+     * Retourne la valeur refus d'un frais
+     * @param type $idfrais
+     */
+   /* public function estRefuse($idFrais){
+        $requetePrepare = PdoGSB::$monPdo->prepare(
+            'SELECT refus '
+            . 'FROM lignefraishorsforfait, '
+            . 'WHERE lignefraishorsforfait.id = :unFrais'
+        );
+        $requetePrepare->bindParam(':unFrais', $idFrais, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        return $requetePrepare;
+    }*/
 }
