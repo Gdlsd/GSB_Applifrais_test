@@ -568,7 +568,7 @@ class PdoGsb
     public function majEtatFicheFrais($idVisiteur, $mois, $etat)
     {
         $requetePrepare = PdoGSB::$monPdo->prepare(
-            'UPDATE ficheFrais '
+            'UPDATE fichefrais '
             . 'SET idetat = :unEtat, datemodif = now() '
             . 'WHERE fichefrais.idvisiteur = :unIdVisiteur '
             . 'AND fichefrais.mois = :unMois'
@@ -577,21 +577,5 @@ class PdoGsb
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
-    }
-    
-    public function getLibelleEtat($idVisiteur, $mois){
-        
-        $requetePrepare = PdoGSB::$monPdo->prepare(
-            'SELECT etat.libelle '
-                . 'FROM etat JOIN fichefrais ON etat.id = fichefrais.idetat '
-                . 'WHERE fichefrais.idvisiteur = :unIdVisiteur '
-                . 'AND fichefrais.mois = :unMois'                
-        );
-        $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $requetePrepare->execute();
-        
-        $libelleEtat = $requetePrepare->fetch();
-        return $libelleEtat;        
     }
 }
