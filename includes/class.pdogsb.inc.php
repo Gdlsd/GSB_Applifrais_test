@@ -119,23 +119,21 @@ class PdoGsb
     }
     
     /**
-     * Retourne l'id d'un visiteur
+     * Retourne une liste de visiteurs dont les fiches de frais sont à l'état passé en parametre
      * 
-     * @param String $nom Nom du visiteur
-     * @param String $prenom Prenom du visiteur
-     * 
+     * @param String $etatFrais Etat du frais 
+     * @return la liste des visiteurs en fonction de l'etat de leur fiche
      */
-    public function getIdVisiteur($nom, $prenom)
-    {
-        $requetePrepare->prepare(
-                'SELECT visiteur.id '
-                . 'FROM visiteur '
-                . 'WERE nom = :nom AND prenom = :prenom'
+    public function getLstVisiteurParEtatFrais($etatFrais){
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT DISTINCT visiteur.id, visiteur.nom, visiteur.prenom '
+                . 'FROM visiteur JOIN fichefrais '
+                . 'ON visiteur.id = fichefrais.idvisiteur '
+                . 'WHERE fichefrais.idetat = :unEtatFrais'
                 );
-        $requetePrepare->bindParam(':nom', $nom, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':prenom', $prenom, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unEtatFrais', $etatFrais, PDO::PARAM_STR);
         $requetePrepare->execute();
-        return $requetePrepare->fetch();
+        return $requetePrepare->fetchAll();
     }
     
     /**
@@ -178,7 +176,8 @@ class PdoGsb
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT * FROM lignefraishorsforfait '
             . 'WHERE lignefraishorsforfait.idvisiteur = :unIdVisiteur '
-            . 'AND lignefraishorsforfait.mois = :unMois'
+            . 'AND lignefraishorsforfait.mois = :unMois '
+                . 'ORDER BY lignefraishorsforfait.date asc'
         );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
@@ -526,6 +525,41 @@ class PdoGsb
         return $lesMois;
     }
 
+    /**
+     * Retourne les mois qui contiennent des fiches à valider (Statut 'CR') pour
+     * un visiteur donné
+     * 
+     * @param type $idVisiteur
+     * @return type
+     * 
+     * @return un tableau associatif de clé un mois -aaamm-, et de valeur
+     *          l'année et le mois correspondant d'une fiche en cours de création (CR)
+     */
+    public function getMoisFicheAValider($idVisiteur)
+    {
+        $requetePrepare = PdoGSB::$monPdo->prepare(
+                'SELECT fichefrais.mois AS mois '
+                . 'FROM fichefrais '
+                . 'WHERE fichefrais.idvisiteur = :unVisiteur '
+                . 'AND fichefrais.idetat = \'CR\' '
+                . 'ORDER BY fichefrais.mois desc'
+        );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $lesMois = array();
+        while($laLigne = $requetePrepare->fetch()) {
+            $mois = $laLigne['mois'];
+            $numAnnee = substr($mois, 0, 4);
+            $numMois = substr($mois, 4, 2);
+            $lesMois[] = array(
+                'mois' => $mois,
+                'numAnnee' => $numAnnee,
+                'numMois' => $numMois
+            );
+        }
+        return $lesMois;
+    }
+    
     /**
      * Retourne les informations d'une fiche de frais d'un visiteur pour un
      * mois donné
