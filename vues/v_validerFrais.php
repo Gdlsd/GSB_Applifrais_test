@@ -2,7 +2,6 @@
 <div class="container">  
     <hr>
     <h1> Validation des fiches de frais </h1>
-    <?php echo 'Statut : ' . $libelleEtat['libelle']; ?>
     <hr>
     
     <div class="row">
@@ -39,7 +38,7 @@
                         <button class="btn btn-success" type="submit">Corriger
                             <span class="glyphicon glyphicon-pencil"></span>
                         </button>
-                        <button class="btn btn-danger" type="reset">Réinitialiser
+                        <button class="btn btn-primary" type="reset">Réinitialiser
                             <span class="glyphicon glyphicon-refresh"></span>
                         </button>
                     </fieldset>
@@ -68,7 +67,8 @@
                             $libelle = htmlspecialchars($unFraisHorsForfait['libelle']);
                             $date = $unFraisHorsForfait['date'];
                             $montant = $unFraisHorsForfait['montant'];
-                            $id = $unFraisHorsForfait['id']; ?>           
+                            $id = $unFraisHorsForfait['id'];
+                            $estRefuse = $unFraisHorsForfait['refus']; ?>           
 
                             <tr>
                                 <form method="post" 
@@ -80,18 +80,87 @@
                                             type="hidden">
                                      <input name="idFrais" value="<?php echo $id; ?>" 
                                             type="hidden">
+                                
+
+
+                                    <?php 
+                                    if($estRefuse)                              //Si les frais sont refusés, les input affichés ne sont pas cliquable, les frais ne sont plus modifiables
+                                    { ?> 
+                                                                         
+                                <td> <input type="text" 
+                                    id ="dateFraisHf" 
+                                    name="dateFraisHf"
+                                    class="form-control"
+                                    value="<?php echo $date?>"
+                                    disabled></td>
+                                <td> <input type="text"
+                                    id="libelleFraisHf"
+                                    name="libelleFraisHf"
+                                    class="form-control"
+                                    value="<?php echo $libelle ?>"
+                                    disabled></td>
+                                <td><input type="text"
+                                    id="montantFraisHf"
+                                    name="montantFraisHf"
+                                    class="form-control"
+                                    value="<?php echo $montant ?>"
+                                    disabled></td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-success" disabled>
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        
+                                        <button type="button" class="btn btn-sm btn-primary" disabled>
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-sm btn-danger" disabled>
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-sm btn-warning" disabled>
+                                        <span class="glyphicon glyphicon-share-alt"></span>
+                                        </button>
+                                    </div>    
+
+                                        <?php } else { ?>
                                      
-                                <td> <?php echo $date ?></td>
-                                <td> <?php echo $libelle ?></td>
-                                <td><?php echo $montant ?></td>
-                                <td>  
-                                    <button class="btn btn-sm btn-danger" type="submit" name="refuserFiche" value="refuserFiche">Refuser
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                    </button>
-                                    
-                                    <button class="btn btn-sm btn-warning" type="submit" name="repporterFiche" value="repporterFiche">Repporter
-                                    <span class="infobulle glyphicon glyphicon-share-alt" aria-label="Repporter ce frais"></span>
-                                    </button>                          
+                                <td> <input type="text" 
+                                    id ="dateFraisHf" 
+                                    name="dateFraisHf"
+                                    class="form-control"
+                                    value="<?php echo $date ?>"></td>
+                                <td> <input type="text"
+                                    id="libelleFraisHf"
+                                    name="libelleFraisHf"
+                                    class="form-control"
+                                    value="<?php echo $libelle ?>"></td>
+                                <td><input type="text"
+                                    id="montantFraisHf"
+                                    name="montantFraisHf"
+                                    class="form-control"
+                                    value="<?php echo $montant ?>"></td>
+                                <td>
+                                    <div class="btn-group">
+                                        
+                                        <button type="submit" data-toggle="tooltip" title="Corriger" class="btn btn-sm btn-success" name="corrigerFraisHf" value="corrigerFraisHf">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        </button>
+                                        
+                                        <button type="reset" data-toggle="tooltip" title="Réinitialiser" class="btn btn-sm btn-primary" >
+                                        <span class="glyphicon glyphicon-refresh"></span>
+                                        </button>
+
+                                        <button type="submit" data-toggle="tooltip" title="Refuser" class="btn btn-sm btn-danger"  name="refuserFrais" value="refuserFrais">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+
+                                        <button type="submit" data-toggle="tooltip" title="Reporter" class="btn btn-sm btn-warning" name="repporterFrais" value="repporterFrais">
+                                        <span class="glyphicon glyphicon-share-alt"></span>
+                                        </button>         
+                                    </div>
+                                    <?php } ?>
                                 </td>
                                 </form>
                             </tr>
@@ -103,14 +172,43 @@
                 </div>
         </div>
     </div>
-    
+    <br />
     <hr>
+    <br />
+    <div class="row">
+        <div class="form-group">    
+        <form method="post" 
+        action="index.php?uc=validerFrais&action=majNbJustificatifs" 
+        role="form">
+            <div class="col-md-2">
+                <label for="nbJustificatifs">Nombre de justificatifs</label>
+            </div>
+            <div class="col-md-1">
+                <input type="number" class="form-control" name='nbJustificatifs' value="<?php echo $nbJustificatifs ?>" > 
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="form-control btn btn-success" value="Valider">Valider 
+                <span class="glyphicon glyphicon-ok"></span>
+                </button>
+            </div>
+            <div class="col-md-2">
+                <button type="reset" class="form-control btn btn-primary" >Réinitialiser
+                <span class="glyphicon glyphicon-refresh"></span>
+                </button>
+            </div>           
+        </div>
+    </div>
+    <br />    
+    <hr>
+    <br />
+    <div class="row">
         <form method="post" action="index.php?uc=validerFrais&action=validerFicheFrais" role="form">
         <input name="lstVisiteurs" value="<?php echo $idVisiteur; ?>" type="hidden">
         <input name="lstMois" value="<?php echo $idMois; ?>" type="hidden">
         <button class="btn btn-lg btn-success center-block" type="submit" name="validerFiche" value="validerFiche">Valider la fiche de frais
         <span class="glyphicon glyphicon-ok"></span>
         </form>
+    </div>
 </div>
 
                                     
