@@ -7,7 +7,7 @@
  */
 ?>
 <div class="container">
-    <h1> Fiche de frais</h1>
+    <h1> Détail de la fiche de frais</h1>
     <hr>
     <div class="panel panel-primary">
     <div class="panel-heading">Fiche de frais du mois 
@@ -100,8 +100,7 @@
      
      <!---------- Total des frais Forfaitisés + Hors forfait ---------->
     <div class="panel panel-info">
-        <div class="panel-heading">Descriptif des éléments hors forfait - 
-            <?php echo $nbJustificatifs ?> justificatifs reçus</div>
+        <div class="panel-heading">Total des frais</div>
             <table class="table table-bordered table-responsive">
                 <tr>
                     <th class="date">Total Frais Forfaitisés</th>
@@ -116,10 +115,17 @@
             </table>
     </div>
      
-</div>
-    
-    
-    
-    
-    
+     <!--------- Bouton pour passer la fiche à "Remboursée" ---------->
+     <hr>
+      </br>
+     
+        <form method="post" action="index.php?uc=suivrePaiementFiche&action=confirmerRemboursement" role="form">
+        <input name="lstVisiteurs" value="<?php echo $idVisiteur; ?>" type="hidden">
+        <input name="lstMois" value="<?php echo $idMois; ?>" type="hidden">
+        <button class="btn btn-lg btn-success center-block" type="submit" name="validerFiche" value="validerFiche" >Confirmer le remboursement
+        <span class="glyphicon glyphicon-ok"></span>
+        </button>
+        </form>
+    <br/>
+    <br/>  
 </div>
