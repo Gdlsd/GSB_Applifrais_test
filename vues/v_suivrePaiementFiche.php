@@ -1,131 +1,119 @@
 <?php
-
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 ?>
 <div class="container">
-    <h1> Détail de la fiche de frais</h1>
-    <hr>
-    <div class="panel panel-primary">
-    <div class="panel-heading">Fiche de frais du mois 
-        <?php echo $numMois . '-' . $numAnnee ?> : </div>
-    <div class="panel-body">
-        <strong><u>Etat :</u></strong> <?php echo $libEtat ?>
-        depuis le <?php echo $dateModif ?> <br> 
-        <strong><u>Montant validé :</u></strong> <?php echo $montantValide ?>
-    </div>
-    </div>
-    
-    <!---------- Calcul des frais forfaitisés ---------->
-    
+
+    <?php include 'vues/v_commandesSuiviFiche.php' ?>
+
+    <!---------- Tableau des fiches de frais ---------->
+
     <div class="panel panel-info">
-    <div class="panel-heading">Eléments forfaitisés</div>
-    <table class="table table-bordered table-responsive">
-        <tr>
-            <th class="col-md-3">Frais</th>
-            <th class="col-md-3">Montant unitaire</th>
-            <th class="col-md-3">Quantité</th>
-            <th class="col-md-3">Montant total</th>
-        </tr>
-        <tr>
-            <?php
-            $totalFraisForfait = 0;
-            foreach ($lesFraisForfait as $unFraisForfait) {    
-                $libelle = $unFraisForfait['libelle'];
-                $montant = $unFraisForfait['montant'];
-                $quantite = $unFraisForfait['quantite'];
-                $fraisForfait = $montant * $quantite;
-                $totalFraisForfait += $fraisForfait;
-            ?>
-        <tr>
-            <td><?php echo $libelle ?></td>
-            <td><?php echo $montant ?></td>
-            <td><?php echo $quantite ?></td>
-            <td><?php echo $fraisForfait ?></td>
-        </tr>          
-            <?php    
-            }
-            ?>
-        <tr>
-            <th>Montant total</th>
-            <td> </td>
-            <td> </td>
-            <th><?php echo $totalFraisForfait . '€' ?> </th>
-        </tr>
-    </table>
-    
-    <table>
-        
-     <!---------- Calcul des frais hors forfait ---------->
-     
-    <div class="panel panel-info">
-    <div class="panel-heading">Elements hors forfait - 
-        <?php echo $nbJustificatifs ?> justificatifs reçus</div>
-        <table class="table table-bordered table-responsive">
-            <tr>
-                <th class="col-md-3">Date</th>
-                <th class="col-md-6">Libellé</th>
-                <th class='col-md-3'>Montant</th>                
-            </tr>
-            <?php
-            $totalFraisHorsForfait = 0;
-            foreach ($lesFraisHorsForfait as $unFraisHorsForfait) {
-                $date = $unFraisHorsForfait['date'];
-                $libelle = htmlspecialchars($unFraisHorsForfait['libelle']);
-                if($unFraisHorsForfait['refus']){
-                    $montant = 0;
-                }else{
-                    $montant = $unFraisHorsForfait['montant']; 
-                }
-                $totalFraisHorsForfait += $montant;
-                ?>
+        <div class="panel-heading">Fiches de frais</div>
+        <table id="tableau-fiches" class="table table-bordered table-responsive tablesorter">
+            <thead>
                 <tr>
-                    <td><?php echo $date ?></td>
-                    <td><?php echo $libelle ?></td>
-                    <td><?php echo $montant ?></td>
+                    <th class="col-md-1 filter-false"><input type="checkbox" id="tout_cocher" class="tout_cocher"
+                                                             onclick="toutCocher('tout_cocher');"></th>
+                    <th class="col-md-2">Visiteur</th>
+                    <th class="col-md-2 filter-select sorter-ddmmyy" data-placeholder="Tous les mois" 
+                        data-value="<?php echo $moisActuel . ' - ' . 
+                                substr($moisActuel, 4, 2) . "/" . substr($moisActuel, 0, 4) ?>">
+                        Mois (aaaa-mm)</th>
+                    <th class="col-md-1">Montant</th>
+                    <th class="col-md-2">Date de modification</th>
+                    <th class="filter-select filter-exact"
+                        data-placeholder="Tous les états">Etat fiche</th>
+                    <th class="col-md-2 filter-false">Action</th>
                 </tr>
-                <?php
-            }
-            ?>
-            <tr>
-                <th>Montant total</th>
-                <td> </td>
-                <th><?php echo $totalFraisHorsForfait . '€' ?> </th>
-            </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th class="col-md-1"><input type="checkbox" id="tout_cocher_foot" class="tout_cocher" 
+                                                onclick="toutCocher('tout_cocher_foot');"></th>
+                    <th class="col-md-2">Visiteur</th>
+                    <th class="col-md-1">Mois (aaaa-mm)</th>
+                    <th class="col-md-1">Montant</th>
+                    <th class="col-md-2">Date de modification</th>
+                    <th class="col-md-2">Etat fiche</th>
+                    <th class="col-md-2">Action</th>
+                </tr>
+                <tr>
+                    <th colspan="7" class="ts-pager form-inline">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-default first">
+                                <span class="glyphicon glyphicon-step-backward"></span>
+                            </button>
+                            <button type="button" class="btn btn-default prev">
+                                <span class="glyphicon glyphicon-backward"></span>
+                            </button>
+                        </div>
+                        <span class="pagedisplay"></span>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-default next">
+                                <span class="glyphicon glyphicon-forward"></span>
+                            </button>
+                            <button type="button" class="btn btn-default last">
+                                <span class="glyphicon glyphicon-step-forward"></span>
+                            </button>
+                        </div>
+                        <select class="form-control input-sm pagesize" id="lstNbLignes" 
+                                title="Selectionnez le nombre de lignes a faire apparaître">
+                            <option selected="selected" value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="all">Toutes les fiches</option>
+                        </select>
+                        <select class="form-control input-sm pagenum" title="Sélectionnez le numéro de page"></select>
+                    </th>
+                </tr>
+            </tfoot>  
+            <tbody> 
+                <?php foreach ($lesFiches as $i => $uneFiche) { ?>
+                    <tr>
+                        <?php
+                        $idVisiteur = $uneFiche['idvisiteur'];                    //Récupération des identifiant de la fiche
+                        $idMois = $uneFiche['mois'];
+                        $idFiche = ['visiteur' => $idVisiteur,
+                            'mois' => $idMois];
+                        ?>
+                        <td>
+                            <input type="checkbox" id="visiteur<?php echo $i ?>"
+                                   name ="visiteurs[]" value="<?php echo implode('|', $idFiche) ?>">
+                        </td>
+                        <td>
+                            <?php echo $uneFiche['nom'] . " " . $uneFiche['prenom'] ?>
+                        </td>
+                        <td data-text="<?php echo $idMois . ' - ' . substr($uneFiche['mois'], 4, 2) . "/" . substr($uneFiche['mois'], 0, 4);?>">
+                            <?php echo substr($uneFiche['mois'], 4, 2) . "/" . substr($uneFiche['mois'], 0, 4) ?>
+                        </td>
+                        <td>
+                            <?php echo $uneFiche['montantvalide'] ?>
+                        </td>
+                        <td>
+                            <?php echo dateAnglaisVersFrancais($uneFiche['datemodif']); ?>
+                        </td>
+                        <td>
+                            <?php echo $uneFiche['etat'] ?>
+                        </td>
+                        <td>
+                            <input type="hidden" name="idvisiteur" value="<?php echo $idVisiteur; ?>">
+                            <input type="hidden" name="idmois" value="<?php echo $idMois; ?>">
+                            <a data-toggle="tooltip" title="Consulter la fiche" 
+                               href="index.php?uc=suivrePaiementFiche&action=afficherFiche&visiteur=<?php echo $idVisiteur ?>&mois=<?php echo $idMois ?>"
+                               target="_blank">
+                                <span class="glyphicon glyphicon-eye-open" style="font-size:20px;"></span></a>
+                        </td>
+                    </tr>
+
+                <?php }
+                ?>
+            </tbody> 
         </table>
     </div>
-     
-     <!---------- Total des frais Forfaitisés + Hors forfait ---------->
-    <div class="panel panel-info">
-        <div class="panel-heading">Total des frais</div>
-            <table class="table table-bordered table-responsive">
-                <tr>
-                    <th class="date">Total Frais Forfaitisés</th>
-                    <th class="libelle">Total Frais Hors Forfait</th>
-                    <th class='montant'>Total des frais à rembourser</th>                
-                </tr>
-                <tr>
-                    <td><?php echo $totalFraisForfait ?></td>
-                    <td><?php echo $totalFraisHorsForfait ?></td>
-                    <th><?php echo $totalFraisForfait + $totalFraisHorsForfait . '€'?></th>
-                </tr>
-            </table>
-    </div>
-     
-     <!--------- Bouton pour passer la fiche à "Remboursée" ---------->
-     <hr>
-      </br>
-     
-        <form method="post" action="index.php?uc=suivrePaiementFiche&action=confirmerRemboursement" role="form">
-        <input name="lstVisiteurs" value="<?php echo $idVisiteur; ?>" type="hidden">
-        <input name="lstMois" value="<?php echo $idMois; ?>" type="hidden">
-        <button class="btn btn-lg btn-success center-block" type="submit" name="validerFiche" value="validerFiche" >Confirmer le remboursement
-        <span class="glyphicon glyphicon-ok"></span>
-        </button>
-        </form>
-    <br/>
-    <br/>  
+</form>
+</div>
 </div>
