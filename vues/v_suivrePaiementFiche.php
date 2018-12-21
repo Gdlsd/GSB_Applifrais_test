@@ -20,14 +20,13 @@
                                                              onclick="toutCocher('tout_cocher');"></th>
                     <th class="col-md-2">Visiteur</th>
                     <th class="col-md-2 filter-select sorter-ddmmyy" data-placeholder="Tous les mois" 
-                        data-value="<?php echo $moisActuel . ' - ' . 
-                                substr($moisActuel, 4, 2) . "/" . substr($moisActuel, 0, 4) ?>">
+                        data-value="<?php echo substr($moisActuel, 0, 4) . "-" .  substr($moisActuel, 4, 2); ?>">
                         Mois (aaaa-mm)</th>
                     <th class="col-md-1">Montant</th>
                     <th class="col-md-2">Date de modification</th>
                     <th class="filter-select filter-exact"
                         data-placeholder="Tous les états">Etat fiche</th>
-                    <th class="col-md-2 filter-false">Action</th>
+                    <th class="col-md-1 filter-false">Action</th>
                 </tr>
             </thead>
             <tfoot>
@@ -35,11 +34,11 @@
                     <th class="col-md-1"><input type="checkbox" id="tout_cocher_foot" class="tout_cocher" 
                                                 onclick="toutCocher('tout_cocher_foot');"></th>
                     <th class="col-md-2">Visiteur</th>
-                    <th class="col-md-1">Mois (aaaa-mm)</th>
+                    <th class="col-md-2">Mois (aaaa-mm)</th>
                     <th class="col-md-1">Montant</th>
                     <th class="col-md-2">Date de modification</th>
                     <th class="col-md-2">Etat fiche</th>
-                    <th class="col-md-2">Action</th>
+                    <th class="col-md-1">Action</th>
                 </tr>
                 <tr>
                     <th colspan="7" class="ts-pager form-inline">
@@ -77,6 +76,8 @@
                         <?php
                         $idVisiteur = $uneFiche['idvisiteur'];                    //Récupération des identifiant de la fiche
                         $idMois = $uneFiche['mois'];
+                        $mois = substr($idMois, 4, 2);
+                        $annee = substr($idMois, 0, 4);
                         $idFiche = ['visiteur' => $idVisiteur,
                             'mois' => $idMois];
                         ?>
@@ -87,8 +88,9 @@
                         <td>
                             <?php echo $uneFiche['nom'] . " " . $uneFiche['prenom'] ?>
                         </td>
-                        <td data-text="<?php echo $idMois . ' - ' . substr($uneFiche['mois'], 4, 2) . "/" . substr($uneFiche['mois'], 0, 4);?>">
-                            <?php echo substr($uneFiche['mois'], 4, 2) . "/" . substr($uneFiche['mois'], 0, 4) ?>
+                        <td data-text="<?php echo $annee . "-" . $mois ?>">
+                            <span class="hidden"><?php echo substr($idMois) ?></span>
+                            <?php echo $mois . "/" . $annee ?>
                         </td>
                         <td>
                             <?php echo $uneFiche['montantvalide'] ?>

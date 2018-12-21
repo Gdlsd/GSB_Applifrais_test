@@ -15,6 +15,7 @@
  */
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
+
 session_start();
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
@@ -59,6 +60,9 @@ case 'etatFrais':
     break;
 case 'validerFrais' :
     include 'controleurs/c_validerFrais.php';
+    break;
+case 'suivrePaiementFiche' :
+    include 'controleurs/c_suivrePaiementFiche.php';
     break;
 case 'deconnexion':
     include 'controleurs/c_deconnexion.php';

@@ -21,7 +21,13 @@
  */
 function estConnecte()
 {
-    return isset($_SESSION['idVisiteur']);
+    if(isset($_SESSION['idVisiteur'])){
+        return true;
+    }else if (isset($_SESSION['idComptable'])){
+        return true;
+    }
+    return false;
+    
 }
 
 /**
@@ -40,6 +46,12 @@ function connecter($idVisiteur, $nom, $prenom)
     $_SESSION['prenom'] = $prenom;
 }
 
+function connecterComptable($idComptable, $nom, $prenom)
+{
+    $_SESSION['idComptable'] = $idComptable;
+    $_SESSION['nom'] = $nom;
+    $_SESSION['prenom'] = $prenom;
+}
 /**
  * Détruit la session active
  *
@@ -62,6 +74,13 @@ function dateFrancaisVersAnglais($maDate)
 {
     @list($jour, $mois, $annee) = explode('/', $maDate);
     return date('Y-m-d', mktime(0, 0, 0, $mois, $jour, $annee));
+}
+/**
+ * Retourne la date actuelle
+ * @return La date actuelle au format Y-m-d
+ */
+function dateActuelle(){
+    return date('Y-m-d');
 }
 
 /**
@@ -95,6 +114,35 @@ function getMois($date)
     }
     return $annee . $mois;
 }
+
+/**
+ * Retourne le mois suivant au format aaaamm selon le mois en cours
+ *
+ * @param String $date au format aaaamm 
+ */
+function getMoisSuivant($date)
+{
+    $annee = (int)substr($date, 0, 4);
+    $mois = (int)substr($date,4, 2 );
+ 
+    if($mois < 12)
+    {
+        $mois += 1;
+    }
+    else
+    {
+        $mois = 1;
+        $annee += 1;
+    }
+    
+    if($mois < 10){
+        return (string)($annee . '0' . $mois);
+    }
+    
+    return (string)($annee . $mois);
+}
+
+
 
 /* gestion des erreurs */
 
@@ -235,6 +283,28 @@ function ajouterErreur($msg)
 }
 
 /**
+ * Ajoute le libellé d'un message de succes au tableau des "succes"
+ *
+ * @param String $msg Libellé du succes
+ *
+ * @return null
+ */
+function ajouterSucces($msg)
+{
+    if (!isset($_REQUEST['succes'])) {
+        $_REQUEST['succes'] = array();
+    }
+    $_REQUEST['succes'][] = $msg;
+}
+
+function ajouterMessageInfo($msg)
+{
+    if(!isset($_REQUEST['messageInfo'])) {
+        $_REQUEST['messageInfo'] = array();
+    }
+    $_REQUEST['messageInfo'][] = $msg;
+}
+/**
  * Retoune le nombre de lignes du tableau des erreurs
  *
  * @return Integer le nombre d'erreurs
@@ -247,4 +317,5 @@ function nbErreurs()
         return count($_REQUEST['erreurs']);
     }
 }
+
 

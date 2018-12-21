@@ -300,21 +300,27 @@ function creationFraisHorsForfait($pdo)
         for ($i = 0; $i <= $nbFrais; $i++) {
             $hasardNumfrais = rand(1, count($desFrais));
             $frais = $desFrais[$hasardNumfrais];
+            $hasardRefus = rand(0, 1);
             $lib = $frais['lib'];
+            if($hasardRefus == 1){
+                $lib = 'REFUSE : ' . $lib;
+            }
+            
             $min = $frais['min'];
             $max = $frais['max'];
             $hasardMontant = rand($min, $max);
             $numAnnee = substr($mois, 0, 4);
             $numMois = substr($mois, 4, 2);
             $hasardJour = rand(1, 28);
+
             if (strlen($hasardJour) == 1) {
                 $hasardJour = '0' . $hasardJour;
             }
             $hasardMois = $numAnnee . '-' . $numMois . '-' . $hasardJour;
             $req = 'insert into lignefraishorsforfait(idvisiteur,mois,libelle,'
-                    . 'date,montant) '
+                    . 'date,montant,refus) '
                     . "values('$idVisiteur','$mois','$lib','$hasardMois',"
-                    . "$hasardMontant);";
+                    . "$hasardMontant, '$hasardRefus');";
             $pdo->exec($req);
         }
     }
@@ -353,7 +359,8 @@ function majFicheFrais($pdo)
         $mois = $uneFicheFrais['mois'];
         $req = 'select sum(montant) as cumul from lignefraishorsforfait '
             . "where lignefraishorsforfait.idvisiteur = '$idVisiteur' "
-            . "and lignefraishorsforfait.mois = '$mois' ";
+            . "and lignefraishorsforfait.mois = '$mois' "
+                . "and refus = 0";
         $res = $pdo->query($req);
         $ligne = $res->fetch();
         $cumulMontantHF = $ligne['cumul'];
@@ -371,7 +378,7 @@ function majFicheFrais($pdo)
         if ($etat == 'CR') {
             $montantValide = 0;
         } else {
-            $montantValide = $montantEngage * rand(80, 100) / 100;
+            $montantValide = $montantEngage /** rand(80, 100) / 100 */;
         }
         $req = "update fichefrais set montantvalide = $montantValide "
             . "where idvisiteur = '$idVisiteur' and mois = '$mois'";

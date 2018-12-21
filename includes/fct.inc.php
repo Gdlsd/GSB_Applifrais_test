@@ -75,6 +75,13 @@ function dateFrancaisVersAnglais($maDate)
     @list($jour, $mois, $annee) = explode('/', $maDate);
     return date('Y-m-d', mktime(0, 0, 0, $mois, $jour, $annee));
 }
+/**
+ * Retourne la date actuelle
+ * @return La date actuelle au format Y-m-d
+ */
+function dateActuelle(){
+    return date('Y-m-d');
+}
 
 /**
  * Transforme une date au format format anglais aaaa-mm-jj vers le format
@@ -128,7 +135,11 @@ function getMoisSuivant($date)
         $annee += 1;
     }
     
-    return $annee . $mois;
+    if($mois < 10){
+        return (string)($annee . '0' . $mois);
+    }
+    
+    return (string)($annee . $mois);
 }
 
 
@@ -272,20 +283,6 @@ function ajouterErreur($msg)
 }
 
 /**
- * Retoune le nombre de lignes du tableau des erreurs
- *
- * @return Integer le nombre d'erreurs
- */
-function nbErreurs()
-{
-    if (!isset($_REQUEST['erreurs'])) {
-        return 0;
-    } else {
-        return count($_REQUEST['erreurs']);
-    }
-}
-
-/**
  * Ajoute le libellé d'un message de succes au tableau des "succes"
  *
  * @param String $msg Libellé du succes
@@ -299,3 +296,25 @@ function ajouterSucces($msg)
     }
     $_REQUEST['succes'][] = $msg;
 }
+
+function ajouterMessageInfo($msg)
+{
+    if(!isset($_REQUEST['messageInfo'])) {
+        $_REQUEST['messageInfo'] = array();
+    }
+    $_REQUEST['messageInfo'][] = $msg;
+}
+/**
+ * Retoune le nombre de lignes du tableau des erreurs
+ *
+ * @return Integer le nombre d'erreurs
+ */
+function nbErreurs()
+{
+    if (!isset($_REQUEST['erreurs'])) {
+        return 0;
+    } else {
+        return count($_REQUEST['erreurs']);
+    }
+}
+

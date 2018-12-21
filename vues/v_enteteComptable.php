@@ -24,9 +24,16 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./styles/bootstrap/bootstrap.css" rel="stylesheet">
-        <link href="./styles/style.css" rel="stylesheet">
-        <link href="./styles/styleComptable.css" rel="stylesheet">
+        <link href="./styles/select2/select2.min.css" rel="stylesheet" />         <!-- Theme Select 2 saisie synamique -->
+        <link href="./styles/bootstrap/bootstrap.css" rel="stylesheet">           <!-- Theme bootstrap -->
+        <link href="./styles/style.css" rel="stylesheet">                         <!-- Aspect général -->
+        <link href="./styles/styleComptable.css" rel="stylesheet">                <!-- Aspect de la partie comptable -->  
+        <link href="./styles/tablesorter/theme.bootstrap_3.css" rel="stylesheet"> <!-- Theme du tableau dynamique-->
+        <link href="./styles/tablesorter/jquery.tablesorter.pager.css" rel="stylesheet"> <!-- Theme de l'addon de tablesorter Pager-->
+
+
+        
+
     </head>
     <body>
         <div class="container">
@@ -52,14 +59,14 @@
                                 </a>
                             </li>
                             <li <?php if ($uc == 'validerFrais') { ?>class="active"<?php } ?>>                  
-                                <a href="index.php?uc=validerFrais&action=afficherListeVisiteurMois">
+                                <a href="index.php?uc=validerFrais">
                                     <span class="glyphicon glyphicon-ok"></span>
                                     Valider les fiches de frais
                                 </a>                                    
                             </li>
                             
-                            <li <?php if ($uc == 'suivrePaiementFrais') { ?>class="active"<?php } ?>>
-                                <a href="index.php?uc=&action=">
+                            <li <?php if ($uc == 'suivrePaiementFiche') { ?>class="active"<?php } ?>>
+                                <a href="index.php?uc=suivrePaiementFiche&action=afficherTableauFrais">
                                     <span class="glyphicon glyphicon-euro"></span>
                                     Suivre le paiement des fiches de frais
                                 </a>                                       
