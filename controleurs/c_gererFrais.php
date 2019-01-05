@@ -23,15 +23,10 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $infosFiche = $pdo->getLesInfosFicheFrais($idVisiteur, $mois);
 switch ($action) {
     case 'saisirFrais':
-        if ($infosFiche['idEtat'] === 'CR') {
+
             if ($pdo->estPremierFraisMois($idVisiteur, $mois)) {
                 $pdo->creeNouvellesLignesFrais($idVisiteur, $mois);
             }
-        } else {
-            ajouterSucces('La fiche de de ' . date('m/Y') . ' a déjà été '
-                    . 'soumise à validation');
-            include 'vues/v_succes.php';
-        }
         break;
     case 'validerMajFraisForfait':
         $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT, FILTER_FORCE_ARRAY);
@@ -73,4 +68,8 @@ if ($infosFiche['idEtat'] === 'CR') {
     //$numMois = substr($idMois, 3, 2 );
     require 'vues/v_listeFraisForfait.php';
     require 'vues/v_listeFraisHorsForfait.php';
+}else{
+    ajouterSucces('La fiche de de ' . date('m/Y') . ' a déjà été '
+            . 'soumise à validation');
+    include 'vues/v_succes.php';
 }
