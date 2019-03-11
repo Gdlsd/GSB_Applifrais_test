@@ -106,12 +106,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">69</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">36</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">17</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
@@ -136,16 +136,15 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-435407672"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1536182423"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-435407672" class="accordion-body collapse in">
+            <div id="namespace-1536182423" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
                     <ul>
                                                                                                     <li class="class"><a href="../classes/PdoGsb.html">PdoGsb</a></li>
-                                                    <li class="class"><a href="../classes/PdoGsbTest.html">PdoGsbTest</a></li>
                                             </ul>
                 </div>
             </div>
@@ -291,7 +290,7 @@ $monPdoGsb qui contiendra l'unique instance de la classe</p>
                             </th>
                             <td>
                                                                     <p>Cheri Bibi - Réseau CERTA <a href="mailto:contact@reseaucerta.org">contact@reseaucerta.org</a></p>
-                                                                    <p>José GIL <a href="mailto:jgil@ac-nice.fr">jgil@ac-nice.fr</a></p>
+                                                                    <p>Guillaume D'ALESSANDRO <a href="mailto:dalessandro.guillaume@gmail.com">dalessandro.guillaume@gmail.com</a></p>
                                                             </td>
                         </tr>
                                             <tr>
@@ -573,7 +572,7 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
             <article class="method">
                 <h3 class="public ">getInfosVisiteur()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getInfosVisiteur(String  <span class="argument">$login</span>, String  <span class="argument">$mdp</span>) : \l&#039;id,</pre>
+                <pre class="signature" style="margin-right: 54px;">getInfosVisiteur(String  <span class="argument">$login</span>, String  <span class="argument">$mdp</span>) : \tableau</pre>
                 <p><em>Retourne les informations d&#039;un visiteur</em></p>
                 
 
@@ -593,8 +592,8 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \l'id,
-                                            &mdash; <p>le nom et le prénom sous la forme d'un tableau associatif</p>
+                    \tableau
+                                            &mdash; <p>contenant l'id, le nom et le prénom</p>
                                     				
                             </article>
         </div>
@@ -641,14 +640,14 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
             <article class="method">
                 <h3 class="public ">getNomPrenomVisiteur()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getNomPrenomVisiteur(\type  <span class="argument">$idVisiteur</span>) : \le</pre>
+                <pre class="signature" style="margin-right: 54px;">getNomPrenomVisiteur(String  <span class="argument">$idVisiteur</span>) : \tableau</pre>
                 <p><em>Retourne le nom et prénom du visiteur dont l&#039;id est en parametre</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>\type</td>
+                                <td>String</td>
                                 <td>$idVisiteur </td>
                                 <td></td>
                             </tr>
@@ -656,8 +655,8 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \le
-                                            &mdash; <p>nom et le prénom d'un visiteur sous la forme d'un tableau associatif</p>
+                    \tableau
+                                            &mdash; <p>contenant le nom et le prénom d'un visiteur</p>
                                     				
                             </article>
         </div>
@@ -678,7 +677,7 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
             <article class="method">
                 <h3 class="public ">getLstVisiteurParEtatFiche()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLstVisiteurParEtatFiche(  <span class="argument">$etatFiche</span>) : \la</pre>
+                <pre class="signature" style="margin-right: 54px;">getLstVisiteurParEtatFiche(  <span class="argument">$etatFiche</span>) : \tableau</pre>
                 <p><em>Retourne une liste de visiteurs dont les fiches de frais sont à l&#039;état passé en parametre</em></p>
                 
 
@@ -693,8 +692,9 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \la
-                                            &mdash; <p>liste des visiteurs en fonction de l'etat de leur fiche</p>
+                    \tableau
+                                            &mdash; <p>contenant la liste des visiteurs en
+fonction de l'etat de leur fiche</p>
                                     				
                             </article>
         </div>
@@ -715,14 +715,14 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
             <article class="method">
                 <h3 class="public ">getInfosFicheParEtat()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getInfosFicheParEtat(\type  <span class="argument">$etat</span>) : \tableau</pre>
+                <pre class="signature" style="margin-right: 54px;">getInfosFicheParEtat(String  <span class="argument">$etat</span>) : \tableau</pre>
                 <p><em>Retourne les information des fiches de frais Validées, Mises en Paiement ou Remboursées</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>\type</td>
+                                <td>String</td>
                                 <td>$etat </td>
                                 <td></td>
                             </tr>
@@ -731,7 +731,7 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
                 
                                     <h4>Returns</h4>
                     \tableau
-                                            &mdash; <p>associatif d'informations de fiche</p>
+                                            &mdash; <p>d'informations de fiche</p>
                                     				
                             </article>
         </div>
@@ -752,7 +752,7 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
             <article class="method">
                 <h3 class="public ">getInfosComptable()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getInfosComptable(String  <span class="argument">$login</span>, String  <span class="argument">$mdp</span>) : \l&#039;id,</pre>
+                <pre class="signature" style="margin-right: 54px;">getInfosComptable(String  <span class="argument">$login</span>, String  <span class="argument">$mdp</span>) : \tableau</pre>
                 <p><em>Retourne les informations d&#039;un comptable</em></p>
                 
 
@@ -772,8 +772,8 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \l'id,
-                                            &mdash; <p>le nom et le prénom sous la forme d'un tableau associatif</p>
+                    \tableau
+                                            &mdash; <p>contenant l'id, le nom et le prénom</p>
                                     				
                             </article>
         </div>
@@ -794,7 +794,7 @@ Appel : $instancePdoGsb = PdoGsb::getPdoGsb();</em></p>
             <article class="method">
                 <h3 class="public ">getLesFraisHorsForfait()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLesFraisHorsForfait(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \tous</pre>
+                <pre class="signature" style="margin-right: 54px;">getLesFraisHorsForfait(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \tableau</pre>
                 <p><em>Retourne sous forme d&#039;un tableau associatif toutes les lignes de frais
 hors forfait concernées par les deux arguments.</em></p>
                 <p>La boucle foreach ne peut être utilisée ici car on procède
@@ -816,9 +816,8 @@ hors forfait concernées par les deux arguments.</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \tous
-                                            &mdash; <p>les champs des lignes de frais hors forfait sous la forme
-d'un tableau associatif</p>
+                    \tableau
+                                            &mdash; <p>contenant tous les champs des lignes de frais hors forfait</p>
                                     				
                             </article>
         </div>
@@ -839,7 +838,7 @@ d'un tableau associatif</p>
             <article class="method">
                 <h3 class="public ">getNbjustificatifs()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getNbjustificatifs(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \le</pre>
+                <pre class="signature" style="margin-right: 54px;">getNbjustificatifs(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \nombre</pre>
                 <p><em>Retourne le nombre de justificatif d&#039;un visiteur pour un mois donné</em></p>
                 
 
@@ -859,8 +858,8 @@ d'un tableau associatif</p>
                 
                 
                                     <h4>Returns</h4>
-                    \le
-                                            &mdash; <p>nombre entier de justificatifs</p>
+                    \nombre
+                                            &mdash; <p>de justificatifs</p>
                                     				
                             </article>
         </div>
@@ -881,7 +880,7 @@ d'un tableau associatif</p>
             <article class="method">
                 <h3 class="public ">getLesFraisForfait()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLesFraisForfait(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \l&#039;id,</pre>
+                <pre class="signature" style="margin-right: 54px;">getLesFraisForfait(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \tableau</pre>
                 <p><em>Retourne sous forme d&#039;un tableau associatif toutes les lignes de frais
 au forfait concernées par les deux arguments</em></p>
                 
@@ -902,9 +901,8 @@ au forfait concernées par les deux arguments</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \l'id,
-                                            &mdash; <p>le libelle et la quantité sous la forme d'un tableau
-associatif</p>
+                    \tableau
+                                            &mdash; <p>contenant l'id, le libelle et la quantité</p>
                                     				
                             </article>
         </div>
@@ -925,15 +923,15 @@ associatif</p>
             <article class="method">
                 <h3 class="public ">getLesIdFrais()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLesIdFrais() : \un</pre>
+                <pre class="signature" style="margin-right: 54px;">getLesIdFrais() : \tableau</pre>
                 <p><em>Retourne tous les id de la table FraisForfait</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    \un
-                                            &mdash; <p>tableau associatif</p>
+                    \tableau
+                                            &mdash; <p>associatif</p>
                                     				
                             </article>
         </div>
@@ -1111,7 +1109,7 @@ pour le mois et le visiteur concerné</em></p>
             <article class="method">
                 <h3 class="public ">estPremierFraisMois()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">estPremierFraisMois(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \vrai</pre>
+                <pre class="signature" style="margin-right: 54px;">estPremierFraisMois(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \booléen</pre>
                 <p><em>Teste si un visiteur possède une fiche de frais pour le mois passé en argument</em></p>
                 
 
@@ -1131,8 +1129,7 @@ pour le mois et le visiteur concerné</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \vrai
-                                            &mdash; <p>ou faux</p>
+                    \booléen
                                     				
                             </article>
         </div>
@@ -1153,7 +1150,7 @@ pour le mois et le visiteur concerné</em></p>
             <article class="method">
                 <h3 class="public ">dernierMoisSaisi()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">dernierMoisSaisi(String  <span class="argument">$idVisiteur</span>) : \le</pre>
+                <pre class="signature" style="margin-right: 54px;">dernierMoisSaisi(String  <span class="argument">$idVisiteur</span>) : \mois</pre>
                 <p><em>Retourne le dernier mois en cours d&#039;un visiteur</em></p>
                 
 
@@ -1168,8 +1165,8 @@ pour le mois et le visiteur concerné</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \le
-                                            &mdash; <p>mois sous la forme aaaamm</p>
+                    \mois
+                                            &mdash; <p>sous la forme aaaamm</p>
                                     				
                             </article>
         </div>
@@ -1366,26 +1363,29 @@ l'année et le mois correspondant</p>
             <article class="method">
                 <h3 class="public ">getLesMoisParEtatFiche()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLesMoisParEtatFiche(  <span class="argument">$idVisiteur</span>,   <span class="argument">$etat</span>) </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">getLesMoisParEtatFiche(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$etat</span>) : \tableau</pre>
+                <p><em>Retourne un tableau de mois en fonction de l&#039;état des fiches d&#039;un visiteur</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$idVisiteur </td>
                                 <td></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$etat </td>
                                 <td></td>
                             </tr>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    \tableau
+                                            &mdash; <p>contenant des mois</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1405,14 +1405,15 @@ l'année et le mois correspondant</p>
             <article class="method">
                 <h3 class="public ">getMoisSuiviFiche()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getMoisSuiviFiche() : \type</pre>
+                <pre class="signature" style="margin-right: 54px;">getMoisSuiviFiche() : \tableau</pre>
                 <p><em>Retourne les mois qui contiennent des fiches déjà validées</em></p>
                 
 
                 
                 
                                     <h4>Returns</h4>
-                    \type
+                    \tableau
+                                            &mdash; <p>contenant des mois (-aaamm-)</p>
                                     				
                             </article>
         </div>
@@ -1433,7 +1434,7 @@ l'année et le mois correspondant</p>
             <article class="method">
                 <h3 class="public ">getLesInfosFicheFrais()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getLesInfosFicheFrais(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \un</pre>
+                <pre class="signature" style="margin-right: 54px;">getLesInfosFicheFrais(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \tableau</pre>
                 <p><em>Retourne les informations d&#039;une fiche de frais d&#039;un visiteur pour un
 mois donné</em></p>
                 
@@ -1454,8 +1455,8 @@ mois donné</em></p>
                 
                 
                                     <h4>Returns</h4>
-                    \un
-                                            &mdash; <p>tableau avec des champs de jointure entre une fiche de frais
+                    \tableau
+                                            &mdash; <p>avec des champs de jointure entre une fiche de frais
 et la ligne d'état</p>
                                     				
                             </article>
@@ -1557,26 +1558,29 @@ et la ligne d'état</p>
             <article class="method">
                 <h3 class="public ">getEtatFiche()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getEtatFiche(  <span class="argument">$idVisiteur</span>,   <span class="argument">$mois</span>) </pre>
-                <p><em></em></p>
+                <pre class="signature" style="margin-right: 54px;">getEtatFiche(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>) : \L&#039;Etat</pre>
+                <p><em>Retourne l&#039;état d&#039;une fiche de frais</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$idVisiteur </td>
                                 <td></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$mois </td>
                                 <td></td>
                             </tr>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    \L'Etat
+                                            &mdash; <p>d'une fiche de frais</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1596,24 +1600,24 @@ et la ligne d'état</p>
             <article class="method">
                 <h3 class="public ">majMontantValideFicheFrais()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">majMontantValideFicheFrais(\type  <span class="argument">$idVisiteur</span>, \type  <span class="argument">$mois</span>, \type  <span class="argument">$montant</span>) : null</pre>
+                <pre class="signature" style="margin-right: 54px;">majMontantValideFicheFrais(String  <span class="argument">$idVisiteur</span>, String  <span class="argument">$mois</span>, String  <span class="argument">$montant</span>) : null</pre>
                 <p><em>Modifie la valeur montantvalide d&#039;une fiche de frais</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td>\type</td>
+                                <td>String</td>
                                 <td>$idVisiteur </td>
                                 <td></td>
                             </tr>
                                                     <tr>
-                                <td>\type</td>
+                                <td>String</td>
                                 <td>$mois </td>
                                 <td></td>
                             </tr>
                                                     <tr>
-                                <td>\type</td>
+                                <td>String</td>
                                 <td>$montant </td>
                                 <td></td>
                             </tr>
@@ -1685,7 +1689,7 @@ et la ligne d'état</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on December 20th, 2018 at 14:57.
+                    on March 8th, 2019 at 20:01.
                 </section>
             </section>
         </section>

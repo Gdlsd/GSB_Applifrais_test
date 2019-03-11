@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="da47b095-2c3c-4a56-99b3-bd10f2394fa0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleurs/c_suivrePaiementFiche.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleurs/c_suivrePaiementFiche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/App.Kernel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/Cilex.Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/PdoGsb.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/PdoGsbTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/Pimple.Container.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/Pimple.ServiceProviderInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Builder.AssemblerFactoryFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.CilexCompatibilityLayer.CilexCompatibilityLayerBundle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.CilexCompatibilityLayer.DependencyInjection.CilexCompatibilityLayerExtension.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Configuration.CommandlineOptionsMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Configuration.ConfigurationFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Configuration.Factory.Strategy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Configuration.Factory.Version2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Configuration.Factory.Version3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Console.Command.Command.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Console.Command.Phar.UpdateCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Console.Command.Project.ParseCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Console.Command.Project.RunCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Console.Command.Project.TransformCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Console.Command.Template.ListCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Parser.CacheFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Parser.ProjectFactoryFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.PipelineFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Stage.Configure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Stage.Parser.ConfigureCache.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Stage.Transform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.Transformer.Template.PathResolverFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Compiler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.CompilerPassInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.ClassTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.Debug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.ElementsIndexBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.ExampleTagsEnricher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.InterfaceTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.MarkerFromTagsExtractor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.NamespaceTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Compiler.Pass.PackageTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ArgumentDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.AssemblerAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.AssemblerFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.AssemblerInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.ArgumentAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.AssemblerAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.ClassAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.ConstantAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.FileAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.FunctionAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.InterfaceAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.MethodAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.NamespaceAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.PropertyAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.AuthorAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.DeprecatedAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ExampleAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.GenericTagAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.LinkAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.MethodAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ParamAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.PropertyAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ReturnAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SeeAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.SinceAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.ThrowsAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.UsesAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VarAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.Tags.VersionAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Builder.Reflector.TraitAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Cache.ProjectDescriptorMapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ClassDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ConstantDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.DescriptorAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Example.Finder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Exception.MissingDependencyException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.FileDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Filter.ClassFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Filter.Filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Filter.Filterable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Filter.StripIgnore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Filter.StripInternal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Filter.StripOnVisibility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.FunctionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.InterfaceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ArgumentInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ChildInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ClassInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ConstantInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ContainerInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ElementInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.FileInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.FunctionInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.InterfaceInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.MethodInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.NamespaceInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.PackageInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.ProjectInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.PropertyInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.TraitInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.TypeInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Interfaces.VisibilityInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.MethodDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.NamespaceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.PackageDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ProjectAnalyzer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ProjectDescriptor.Settings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ProjectDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.ProjectDescriptorBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.PropertyDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.AuthorDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.BaseTypes.TypedVariableAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.DeprecatedDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.ExampleDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.LinkDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.MethodDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.ParamDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.PropertyDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.ReturnDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.SeeDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.SinceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.ThrowsDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.UsesDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.VarDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Tag.VersionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.TagDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.TraitDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Type.BooleanDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Type.CollectionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Type.FloatDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Type.IntegerDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Type.StringDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Descriptor.Type.UnknownTypeDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.DomainModel.Parser.FileCollector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.DomainModel.Path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.DomainModel.Uri.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Event.DebugEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Event.Dispatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Event.EventAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Event.LogEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.Cache.ZendCacheFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.FileSystemFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.FlySystemFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.JmsSerializer.FileCache.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.Parser.FlySystemCollector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.Parser.FlySystemFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.Parser.SpecificationFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Infrastructure.SpecificationFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Event.PreFileEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Exception.FilesNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Exception.MissingDependencyException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Middleware.CacheMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Middleware.EmittingMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Middleware.ErrorHandlingMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Middleware.StopwatchMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Parser.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Partials.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Partials.Exception.MissingNameForPartialException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Partials.Partial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Partials.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.AuthorTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.CoversTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.IgnoreTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.InternalTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.LicenseTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.MethodTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ParamTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.PropertyTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ReturnTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.UsesTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.VarTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Checkstyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.FileIo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Pathfinder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Sourcecode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Statistics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ArgumentConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ConstantConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.DocBlockConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.InterfaceConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.MethodConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.PropertyConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TagConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TraitConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Core.Xslt.Extension.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Graphs.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Graphs.Writer.Graph.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.LegacyNamespaceConverter.LegacyNamespaceFilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.LegacyNamespaceConverter.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Parameter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Plugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Command.Manual.BaseConvertCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToHtmlCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToLatexCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Command.Manual.ToPdfCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.ConverterInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Definition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Definition.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Exception.ConverterNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.FormatNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Format.Format.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Assets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.Glossary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.BaseEntry.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.File.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Heading.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Module.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.CodeBlock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Figure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Toctree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Document.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.Doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.ToHtml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Creator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Discover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.ToHtmlInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.ToLatexInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Converter.ToPdfInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Template.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Template.TemplateInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Scrybe.Template.Twig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Twig.Extension.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Twig.ExtensionInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Twig.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Plugin.Twig.Writer.Twig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Behaviour.BehaviourAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Behaviour.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Event.PostTransformEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Event.PostTransformationEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Event.PreTransformEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Event.PreTransformationEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Event.PreXslWriterEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Event.WriterInitializationEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Exception.MissingDependencyException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Exception.UnknownWriter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.ExternalRouter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.ForFileProxy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.Matcher.MatcherInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.Queue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.Renderer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.RouterAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.Rule.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.StandardRouter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ClassDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.ConstantDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FileDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FqsenDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.FunctionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.MethodDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.NamespaceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PackageDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.PropertyDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.Standard.QualifiedNameToUrlConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Router.UrlGenerator.UrlGeneratorInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Template.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Template.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Template.Parameter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Template.PathResolver.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Transformation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Transformer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Writer.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Writer.Exception.RequirementMissing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Writer.Initializable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Writer.Routable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Writer.Translatable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Transformer.Writer.WriterAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes/phpDocumentor.Translator.Translator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/bootstrap-combined.no-icons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/jquery.iviewer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/Read Me.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/fonts/phpdocumentor-clean-icons.dev.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/fonts/phpdocumentor-clean-icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/fonts/phpdocumentor-clean-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/fonts/phpdocumentor-clean-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/fonts/phpdocumentor-clean-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/lte-ie7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/phpdocumentor-clean-icons/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/prism.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_accueil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_accueilComptable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_connexion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_deconnexion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_etatFrais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_gererFrais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_suivrePaiementFiche.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs.c_validerFrais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_accueil.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_accueilComptable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_connexion.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_deconnexion.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_etatFrais.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_gererFrais.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_suivrePaiementFiche.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/controleurs/c_validerFrais.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/includes.class.pdogsb.inc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/includes.fct.inc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/includes/class.pdogsb.inc.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/includes/fct.inc.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/index.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/pdf.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/pdf.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.bin.phpdoc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.config.bundles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.data.templates.new-black.ajax_search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.Kernel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Builder.AssemblerFactoryFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.CilexCompatibilityLayer.Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.CilexCompatibilityLayer.CilexCompatibilityLayerBundle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.CilexCompatibilityLayer.Container.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.CilexCompatibilityLayer.DependencyInjection.CilexCompatibilityLayerExtension.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.CilexCompatibilityLayer.ServiceProviderInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Configuration.CommandlineOptionsMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Configuration.ConfigurationFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Configuration.Factory.Strategy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Configuration.Factory.Version2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Configuration.Factory.Version3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Console.Command.Command.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Console.Command.Phar.UpdateCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Console.Command.Project.ParseCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Console.Command.Project.RunCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Console.Command.Project.TransformCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Console.Command.Template.ListCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Parser.CacheFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Parser.ProjectFactoryFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.PipelineFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Stage.Configure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Stage.Parser.ConfigureCache.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Stage.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Stage.Transform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.Transformer.Template.PathResolverFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Compiler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.CompilerPassInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Linker.Linker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.ClassTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.Debug.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.ElementsIndexBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.ExampleTagsEnricher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.InterfaceTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.MarkerFromTagsExtractor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.NamespaceTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.PackageTreeBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Compiler.Pass.ResolveInlineLinkAndSeeTags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ArgumentDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.AssemblerAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.AssemblerFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.AssemblerInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.ArgumentAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.AssemblerAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.ClassAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.ConstantAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.FileAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.FunctionAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.InterfaceAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.MethodAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.NamespaceAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.PropertyAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.AuthorAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.DeprecatedAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.ExampleAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.GenericTagAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.LinkAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.MethodAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.ParamAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.PropertyAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.ReturnAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.SeeAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.SinceAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.ThrowsAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.UsesAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.VarAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.Tags.VersionAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Builder.Reflector.TraitAssembler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Cache.ProjectDescriptorMapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ClassDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ConstantDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.DescriptorAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Example.Finder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Exception.MissingDependencyException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.FileDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Filter.ClassFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Filter.Filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Filter.Filterable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Filter.StripIgnore.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Filter.StripInternal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Filter.StripOnVisibility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.FunctionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.InterfaceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ArgumentInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ChildInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ClassInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ConstantInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ContainerInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ElementInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.FileInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.FunctionInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.InterfaceInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.MethodInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.NamespaceInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.PackageInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.ProjectInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.PropertyInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.TraitInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.TypeInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Interfaces.VisibilityInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.MethodDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.NamespaceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.PackageDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ProjectAnalyzer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ProjectDescriptor.Settings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ProjectDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.ProjectDescriptorBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.PropertyDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.AuthorDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.BaseTypes.TypedAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.BaseTypes.TypedVariableAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.DeprecatedDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.ExampleDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.LinkDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.MethodDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.ParamDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.PropertyDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.ReturnDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.SeeDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.SinceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.ThrowsDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.UsesDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.VarDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Tag.VersionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.TagDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.TraitDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Type.BooleanDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Type.CollectionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Type.FloatDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Type.IntegerDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Type.StringDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Descriptor.Type.UnknownTypeDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.DomainModel.Dsn.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.DomainModel.Parser.FileCollector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.DomainModel.Path.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.DomainModel.Uri.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Event.DebugEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Event.Dispatcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Event.EventAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Event.LogEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.Cache.ZendCacheFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.FileSystemFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.FlySystemFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.JmsSerializer.FileCache.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.Parser.FlySystemCollector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.Parser.FlySystemFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.Parser.SpecificationFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Infrastructure.SpecificationFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Event.PreFileEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Exception.FilesNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Exception.MissingDependencyException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Messages.en.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Middleware.CacheMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Middleware.EmittingMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Middleware.ErrorHandlingMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Middleware.StopwatchMiddleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Parser.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Partials.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Partials.Exception.MissingNameForPartialException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Partials.Partial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Partials.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Messages.de.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Messages.en.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.AuthorTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.CoversTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.IgnoreTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.InternalTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.LicenseTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.MethodTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ParamTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.PropertyTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.ReturnTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.UsesTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.VarTag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Checkstyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.FileIo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Pathfinder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Sourcecode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Statistics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ArgumentConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.ConstantConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.DocBlockConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.InterfaceConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.MethodConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.PropertyConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TagConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.TraitConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Transformer.Writer.Xsl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Core.Xslt.Extension.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Graphs.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Graphs.Writer.Graph.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.LegacyNamespaceConverter.LegacyNamespaceFilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.LegacyNamespaceConverter.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Parameter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Plugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Command.Manual.BaseConvertCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Command.Manual.ToHtmlCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Command.Manual.ToLatexCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Command.Manual.ToPdfCommand.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.BaseConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.ConverterInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Definition.Definition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Definition.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Exception.ConverterNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Format.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.FormatNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Format.Format.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.Assets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.Glossary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.BaseEntry.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.File.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Heading.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.Module.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.CodeBlock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Figure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.Toctree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Document.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.Doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.ToHtml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Creator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.Discover.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.ToHtmlInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.ToLatexInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Converter.ToPdfInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Template.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Template.TemplateInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Scrybe.Template.Twig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Twig.Extension.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Twig.ExtensionInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Twig.ServiceProvider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Plugin.Twig.Writer.Twig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Behaviour.BehaviourAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Behaviour.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Event.PostTransformEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Event.PostTransformationEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Event.PreTransformEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Event.PreTransformationEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Event.PreXslWriterEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Event.WriterInitializationEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Exception.MissingDependencyException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Exception.UnknownWriter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.ExternalRouter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.ForFileProxy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.Matcher.MatcherInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.Queue.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.Renderer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.RouterAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.Rule.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.StandardRouter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.ClassDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.ConstantDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.FileDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.FqsenDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.FunctionDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.MethodDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.NamespaceDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.PackageDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.PropertyDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.Standard.QualifiedNameToUrlConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Router.UrlGenerator.UrlGeneratorInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Template.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Template.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Template.Parameter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Template.PathResolver.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Transformation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Transformer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Writer.Collection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Writer.Exception.RequirementMissing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Writer.Initializable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Writer.Routable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Writer.Translatable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Transformer.Writer.WriterAbstract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor.src.phpDocumentor.Translator.Translator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/bin/phpdoc.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/config/bundles.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/data/templates/new-black/ajax_search.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/Kernel.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Builder/AssemblerFactoryFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/CilexCompatibilityLayer/Application.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/CilexCompatibilityLayer/CilexCompatibilityLayerBundle.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/CilexCompatibilityLayer/Container.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/CilexCompatibilityLayer/DependencyInjection/CilexCompatibilityLayerExtension.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/CilexCompatibilityLayer/ServiceProviderInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Configuration/CommandlineOptionsMiddleware.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Configuration/ConfigurationFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Configuration/Factory/Strategy.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Configuration/Factory/Version2.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Configuration/Factory/Version3.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Console/Command/Command.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Console/Command/Phar/UpdateCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Console/Command/Project/ParseCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Console/Command/Project/RunCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Console/Command/Project/TransformCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Console/Command/Template/ListCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Parser/CacheFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Parser/ProjectFactoryFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/PipelineFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Stage/Configure.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Stage/Parser.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Stage/Parser/ConfigureCache.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Stage/Transform.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Application/Transformer/Template/PathResolverFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Compiler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/CompilerPassInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Linker/Linker.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/ClassTreeBuilder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/Debug.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/ElementsIndexBuilder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/ExampleTagsEnricher.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/InterfaceTreeBuilder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/MarkerFromTagsExtractor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/NamespaceTreeBuilder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/PackageTreeBuilder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Compiler/Pass/ResolveInlineLinkAndSeeTags.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ArgumentDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/AssemblerAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/AssemblerFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/AssemblerInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/ArgumentAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/AssemblerAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/ClassAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/ConstantAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/FileAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/FunctionAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/InterfaceAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/MethodAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/NamespaceAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/PropertyAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/AuthorAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/DeprecatedAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/ExampleAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/GenericTagAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/LinkAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/MethodAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/ParamAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/PropertyAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/ReturnAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/SeeAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/SinceAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/ThrowsAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/UsesAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/VarAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/Tags/VersionAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Builder/Reflector/TraitAssembler.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Cache/ProjectDescriptorMapper.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ClassDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Collection.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ConstantDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/DescriptorAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Example/Finder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Exception/MissingDependencyException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/FileDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Filter/ClassFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Filter/Filter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Filter/Filterable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Filter/StripIgnore.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Filter/StripInternal.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Filter/StripOnVisibility.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/FunctionDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/InterfaceDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ArgumentInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ChildInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ClassInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ConstantInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ContainerInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ElementInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/FileInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/FunctionInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/InterfaceInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/MethodInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/NamespaceInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/PackageInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/ProjectInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/PropertyInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/TraitInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/TypeInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Interfaces/VisibilityInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/MethodDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/NamespaceDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/PackageDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ProjectAnalyzer.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ProjectDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ProjectDescriptor/Settings.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/ProjectDescriptorBuilder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/PropertyDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/AuthorDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/BaseTypes/TypedAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/BaseTypes/TypedVariableAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/DeprecatedDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/ExampleDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/LinkDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/MethodDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/ParamDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/PropertyDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/ReturnDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/SeeDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/SinceDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/ThrowsDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/UsesDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/VarDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Tag/VersionDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/TagDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/TraitDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Type/BooleanDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Type/CollectionDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Type/FloatDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Type/IntegerDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Type/StringDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Descriptor/Type/UnknownTypeDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/DomainModel/Dsn.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/DomainModel/Parser/FileCollector.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/DomainModel/Path.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/DomainModel/Uri.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Event/DebugEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Event/Dispatcher.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Event/EventAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Event/LogEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/Cache/ZendCacheFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/FileSystemFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/FlySystemFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/JmsSerializer/FileCache.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/Parser/FlySystemCollector.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/Parser/FlySystemFile.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/Parser/SpecificationFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Infrastructure/SpecificationFactory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Event/PreFileEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Exception.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Exception/FilesNotFoundException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Exception/MissingDependencyException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Messages/en.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Middleware/CacheMiddleware.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Middleware/EmittingMiddleware.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Middleware/ErrorHandlingMiddleware.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Middleware/StopwatchMiddleware.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Parser/Parser.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Partials/Collection.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Partials/Exception/MissingNameForPartialException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Partials/Partial.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Partials/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Exception.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Messages/de.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Messages/en.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/AuthorTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/CoversTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/IgnoreTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/InternalTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/LicenseTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/MethodTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/ParamTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/PropertyTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/ReturnTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/UsesTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Behaviour/Tag/VarTag.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Checkstyle.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/FileIo.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Pathfinder.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Sourcecode.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Statistics.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/ArgumentConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/ConstantConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/DocBlockConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/InterfaceConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/MethodConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/PropertyConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/TagConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xml/TraitConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Transformer/Writer/Xsl.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Core/Xslt/Extension.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Graphs/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Graphs/Writer/Graph.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/LegacyNamespaceConverter/LegacyNamespaceFilter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/LegacyNamespaceConverter/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Parameter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Plugin.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Command/Manual/BaseConvertCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Command/Manual/ToHtmlCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Command/Manual/ToLatexCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Command/Manual/ToPdfCommand.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/BaseConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/ConverterInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Definition/Definition.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Definition/Factory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Exception/ConverterNotFoundException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Factory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Format/Collection.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Format/Exception/FormatNotFoundException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Format/Format.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/Assets.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/Glossary.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/TableOfContents.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/TableOfContents/BaseEntry.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/TableOfContents/File.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/TableOfContents/Heading.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/Metadata/TableOfContents/Module.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Directives/CodeBlock.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Directives/Figure.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Directives/Image.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Directives/Toctree.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Document.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Roles/Doc.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/ToHtml.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Visitors/Creator.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/RestructuredText/Visitors/Discover.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/ToHtmlInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/ToLatexInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Converter/ToPdfInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Template/Factory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Template/TemplateInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Scrybe/Template/Twig.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Twig/Extension.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Twig/ExtensionInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Twig/ServiceProvider.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Plugin/Twig/Writer/Twig.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Behaviour/BehaviourAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Behaviour/Collection.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Event/PostTransformEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Event/PostTransformationEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Event/PreTransformEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Event/PreTransformationEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Event/PreXslWriterEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Event/WriterInitializationEvent.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Exception.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Exception/MissingDependencyException.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Exception/UnknownWriter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/ExternalRouter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/ForFileProxy.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/Matcher/MatcherInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/Queue.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/Renderer.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/RouterAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/Rule.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/StandardRouter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/ClassDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/ConstantDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/FileDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/FqsenDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/FunctionDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/MethodDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/NamespaceDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/PackageDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/PropertyDescriptor.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/Standard/QualifiedNameToUrlConverter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Router/UrlGenerator/UrlGeneratorInterface.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Template.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Template/Collection.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Template/Factory.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Template/Parameter.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Template/PathResolver.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Transformation.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Transformer.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Writer/Collection.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Writer/Exception/RequirementMissing.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Writer/Initializable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Writer/Routable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Writer/Translatable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Transformer/Writer/WriterAbstract.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/phpdocumentor/src/phpDocumentor/Translator/Translator.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/testID.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/testID.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/tests.gendatas.fonctions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/tests.gendatas.majGSB.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/tests.includes.class.pdogsb.incTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/tests/gendatas/fonctions.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/tests/gendatas/majGSB.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/tests/includes/class.pdogsb.incTest.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_accueil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_accueilComptable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_affichageFiche.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_commandesSuiviFiche.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_connexion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_deconnexion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_entete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_enteteComptable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_erreurs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_etatFrais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_listeFraisForfait.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_listeFraisHorsForfait.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_listeMois.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_listeVisiteurs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_messageInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_pied.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_succes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_suivrePaiementFiche.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues.v_validerFrais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_accueil.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_accueilComptable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_affichageFiche.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_commandesSuiviFiche.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_connexion.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_deconnexion.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_entete.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_enteteComptable.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_erreurs.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_etatFrais.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_listeFraisForfait.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_listeFraisHorsForfait.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_listeMois.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_listeVisiteurs.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_messageInfo.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_pied.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_succes.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_suivrePaiementFiche.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/files/vues/v_validerFrais.php.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/font/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/font/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/font/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/font/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/font/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/graphs/class.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/apple-touch-icon-114x114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/apple-touch-icon-72x72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/custom-icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/hierarchy-item.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/icon-class-13x13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/icon-class.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/icon-interface-13x13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/icon-interface.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/icon-trait-13x13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/icon-trait.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/grab.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/hand.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/iviewer.rotate_left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/iviewer.rotate_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/iviewer.zoom_fit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/iviewer.zoom_in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/iviewer.zoom_out.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/iviewer/iviewer.zoom_zero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery-1.11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery.dotdotdot-1.5.9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery.dotdotdot-1.5.9.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery.iviewer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery.iviewer.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery.mousewheel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/jquery.smooth-scroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/prism.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/ui/1.10.4/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/App.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/Cilex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/Pimple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.CilexCompatibilityLayer.DependencyInjection.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.CilexCompatibilityLayer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Configuration.Factory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Configuration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Console.Command.Phar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Console.Command.Project.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Console.Command.Template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Console.Command.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Console.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Stage.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Stage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Transformer.Template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.Transformer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Compiler.Pass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Compiler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Builder.Reflector.Tags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Builder.Reflector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Builder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Cache.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Interfaces.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.ProjectDescriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Tag.BaseTypes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.Type.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Descriptor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.DomainModel.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.DomainModel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Infrastructure.Cache.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Infrastructure.JmsSerializer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Infrastructure.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Infrastructure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Parser.Event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Parser.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Parser.Middleware.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Parser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Partials.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Partials.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.Tag.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.Transformer.Behaviour.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.Xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.Transformer.Writer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.Transformer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.Xslt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Core.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Graphs.Writer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Graphs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.LegacyNamespaceConverter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Command.Manual.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Command.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.Definition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.Format.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.TableOfContents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.Metadata.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Directives.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Roles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.Visitors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.RestructuredText.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Converter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.Template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Scrybe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Twig.Writer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.Twig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Plugin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Behaviour.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Router.Matcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Router.UrlGenerator.Standard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Router.UrlGenerator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Router.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Writer.Exception.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.Writer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Transformer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.Translator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/namespaces/phpDocumentor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-0b/phpdoc-cache-file_a9c1aa83aee4f0bcd1a485fbb73ae604.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-0e/phpdoc-cache-file_51e53c2f0d57c254bf7d413154406e0c.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-15/phpdoc-cache-file_922bf2ffc9c6a72c87e0a58288711672.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-15/phpdoc-cache-file_de2fe4aa7d4cfc7e96cd58667c47e8cc.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-17/phpdoc-cache-file_8f6b5a066d26e7833fe6cb33767ddae8.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-20/phpdoc-cache-file_fb6ae3b117f22e39535f2182ca7eb724.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-2d/phpdoc-cache-file_a7c0b6de8b71eb6bc109be1de6bc478a.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-2e/phpdoc-cache-settings.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-36/phpdoc-cache-file_08ae24f4135b71ee8208465631b8950d.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-36/phpdoc-cache-file_0c0798ac5da1fd1df91b4e779a89aeea.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-4a/phpdoc-cache-file_24f85fedb55e65873aa300934d7e43f8.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-4f/phpdoc-cache-file_76681eea751f3ee82d77566f4740da28.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-50/phpdoc-cache-file_2db7930793e1ca05716bea0d08f7518b.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-57/phpdoc-cache-file_809f0d292bbef43b3277835831314fc6.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-5e/phpdoc-cache-file_2baf283e6ca08ab434abfbfafb3a5f94.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-6e/phpdoc-cache-file_bec345503f5c8b997892c5d780c3f293.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-70/phpdoc-cache-file_8cbbcee234e145414dfc273f83033b07.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-78/phpdoc-cache-file_1a0bd39482c96c65ed64868c36422152.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-7f/phpdoc-cache-file_ea68420da882d683082a0beabb609116.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-80/phpdoc-cache-file_d1f8b00ac5fa712cee4b0be48edb8e82.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-87/phpdoc-cache-file_68753f9be70d06d59c410f87b5b751bc.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-8c/phpdoc-cache-file_1a90dfd30201edec91a4930b0847dca0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-9b/phpdoc-cache-file_abd17c3928c813af5fce947096f094f5.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-a8/phpdoc-cache-file_a501bbd48f81fe40f1ef04c02beffee7.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-af/phpdoc-cache-file_07384a80ea990a0a3e179c4e5ea87f27.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-af/phpdoc-cache-file_ba1a2f8f4d42da873c77ce820e207ae5.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-b0/phpdoc-cache-file_986bb15bb134c3e599ef2b15ddf2cfe4.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-be/phpdoc-cache-file_00d59217f0e1e167f0c8e28d3fb65fa6.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-c2/phpdoc-cache-file_865d6f1cf47cbc467009b0032fb7c624.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-c8/phpdoc-cache-file_828e0013b8f3bc1bb22b4f57172b019d.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-ce/phpdoc-cache-file_40d4fa91c000b6492aa37d345bb20899.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-d8/phpdoc-cache-file_d6896ca99817818e71e001c74e8840ce.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-dc/phpdoc-cache-file_05f7a48da791af3528a2b89cf1be0f03.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-e9/phpdoc-cache-file_08194c63ecb8fbcc6a806782d0d42db8.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-f1/phpdoc-cache-file_c65c7e8ceee14aca3c3917d4409bc26b.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/phpdoc-cache-fe/phpdoc-cache-file_272924e644c207297641bcab1c0337f7.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/reports/deprecated.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/reports/errors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/reports/markers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo .png" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="347" column="89" lean-forward="true" selection-start-line="347" selection-start-column="89" selection-end-line="347" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/fct.inc.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_gererFrais.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_suivrePaiementFiche.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_connexion.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_deconnexion.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_etatFrais.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_validerFrais.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../suividevosfrais/serveursuivifrais.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1122">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ligneFrais</find>
+      <find>ligneFraisForfait</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../suividevosfrais/serveursuivifrais.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/herrera-io/phar-update" />
+      <path value="$PROJECT_DIR$/vendor/herrera-io/json" />
+      <path value="$PROJECT_DIR$/vendor/cilex/cilex" />
+      <path value="$PROJECT_DIR$/vendor/cilex/console-service-provider" />
+      <path value="$PROJECT_DIR$/vendor/jms/parser-lib" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-filter" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-config" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-json" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-hydrator" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-i18n" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-servicemanager" />
+      <path value="$PROJECT_DIR$/vendor/phpcollection/phpcollection" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-serializer" />
+      <path value="$PROJECT_DIR$/vendor/zetacomponents/document" />
+      <path value="$PROJECT_DIR$/vendor/zetacomponents/base" />
+      <path value="$PROJECT_DIR$/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/kherge/version" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/graphviz" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/fileset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/phpdocumentor" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ppe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ppe" type="462c0819:PsiDirectoryNode" />
+              <item name="controleurs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ppe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ppe" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../suividevosfrais" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da47b095-2c3c-4a56-99b3-bd10f2394fa0" name="Default Changelist" comment="" />
+      <created>1550960281743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550960281743</updated>
+      <workItem from="1550960282841" duration="1000000" />
+      <workItem from="1550999050579" duration="1562000" />
+      <workItem from="1551002568669" duration="92000" />
+      <workItem from="1551483908846" duration="756000" />
+      <workItem from="1551536699394" duration="701000" />
+      <workItem from="1551620098002" duration="602000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4713000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14658849" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="347" column="89" lean-forward="true" selection-start-line="347" selection-start-column="89" selection-end-line="347" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/fct.inc.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_gererFrais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_suivrePaiementFiche.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_connexion.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_deconnexion.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_etatFrais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_validerFrais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../suividevosfrais/serveursuivifrais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

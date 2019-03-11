@@ -74,7 +74,7 @@ if ($uc == 'validerFrais' || $uc == 'suivrePaiementFiche') {  //On contrôle le 
                         ?>                                         
                 </div>
             </form> 
-            <hr>
+            
             </div>
             </div>       
 

@@ -34,7 +34,7 @@ switch ($action) {
         }
         break;
 
-    case 'validationFraisHorsForfait' :
+    case 'traiterFraisHorsForfait' :
 
         $idMoisSuivant = getMoisSuivant($idMois);
         $libelle = filter_input(INPUT_POST, 'libelleFraisHf', FILTER_SANITIZE_STRING);
@@ -114,8 +114,8 @@ switch ($action) {
 
 //Affichage liste déroulantes lstVisiteur et lstMois
 $uc = 'validerFrais';
-$lesVisiteurs = $pdo->getLstVisiteurParEtatFiche('CR');
-$lesMois = $pdo->getLesMoisParEtatFiche($idVisiteur, 'CR');
+$lesVisiteurs = $pdo->getLstVisiteurParEtatFiche('CL');
+$lesMois = $pdo->getLesMoisParEtatFiche($idVisiteur, 'CL');
 $moisASelectionner = $idMois;
 include 'vues/v_listeVisiteurs.php';
 

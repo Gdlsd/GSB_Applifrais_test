@@ -51,7 +51,7 @@ switch ($action) {
                         );
                         if ($etatAControler['idetat'] === 'VA') {               //Si la fiche est à l'état "VA" (Validée)
                             $pdo->majEtatFicheFrais(                            //Mise à jour de l'état vers "Mise en paiement" (MP)
-                                $selectionFiche[0]['visiteur'],             //On choisit l'index [0] de la sélection puisque ce tableau ne contient qu'une ligne
+                                $selectionFiche[0]['visiteur'],                 //On choisit l'index [0] de la sélection puisque ce tableau ne contient qu'une ligne
                                 $selectionFiche[0]['mois'],
                                 'MP'
                             );

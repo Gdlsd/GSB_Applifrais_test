@@ -4,3 +4,4 @@ nbproject /*
 !nbproject/project.xml
 composer
 /nbproject/private/
+/vendor/

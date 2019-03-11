@@ -36,14 +36,14 @@ $(document).ready(function(){
  * 
  */
 
-function toutCocher($nomInput){
+function toutCocher(nomInput){
 
 // Récupération du vecteur visiteur[]
 var v = document.getElementsByName('visiteurs[]');  
 
 // Si la sélection s'est faite via la checkbox 'tout_cocher', 'tout_cocher_foot' prend la valeur de 'tout_cocher'
 // Il se produit la situation inverse si l'utilisateur coche 'tout_cocher_foot'
-    if($nomInput === 'tout_cocher'){
+    if(nomInput === 'tout_cocher'){
         document.getElementById('tout_cocher_foot').checked = document.getElementById('tout_cocher').checked;
     }
     else{
