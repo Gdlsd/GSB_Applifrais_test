@@ -80,15 +80,56 @@ class PdoGsb
     {
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT visiteur.id AS id, visiteur.nom AS nom, '
-            . 'visiteur.prenom AS prenom '
+            . 'visiteur.prenom AS prenom, visiteur.mdp AS mdp '
             . 'FROM visiteur '
-            . 'WHERE visiteur.login = :unLogin AND visiteur.mdp = :unMdp'
+            . 'WHERE visiteur.login = :unLogin'
         );
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
+       // $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
         $requetePrepare->execute();
-        return $requetePrepare->fetch();
+                
+        $ligne = $requetePrepare->fetch();
+        
+        if(password_verify($mdp, $ligne['mdp']))
+        {   
+            return $ligne;
+        }
+        else
+        {
+            return null;
+        }
     }
+    
+    /**
+     * Retourne les informations d'un comptable
+     *
+     * @param String $login Login du comptable
+     * @param String $mdp   Mot de passe du comptable
+     *
+     * @return tableau contenant l'id, le nom et le prénom
+     */
+    public function getInfosComptable($login, $mdp)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT comptable.id AS id, comptable.nom AS nom, '
+                . 'comptable.prenom AS prenom, comptable.mdp AS mdp '
+                . 'FROM comptable '
+                . 'WHERE comptable.login = :unLogin'
+        );
+        $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $ligne = $requetePrepare->fetch();
+        
+        if(password_verify($mdp, $ligne['mdp']))
+        {
+            return $ligne;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
     
     /**
      * Retourne une liste de nom et prénoms de l'ensemble des visiteurs
@@ -96,8 +137,7 @@ class PdoGsb
     public function getListeVisiteur()
     {
         $requete = PdoGsb::$monPdo->query(
-            'SELECT visiteur.id AS id, visiteur.nom AS nom,'
-            . 'visiteur.prenom AS prenom '
+            'SELECT * '
             . ' FROM visiteur'
             );
         return $requete->fetchAll();
@@ -157,29 +197,6 @@ class PdoGsb
         return $requetePrepare->fetchAll();
     }
     
-    /**
-     * Retourne les informations d'un comptable
-     *
-     * @param String $login Login du comptable
-     * @param String $mdp   Mot de passe du comptable
-     *
-     * @return tableau contenant l'id, le nom et le prénom
-     */
-    public function getInfosComptable($login, $mdp)
-    {
-     
-        $requetePrepare = PdoGsb::$monPdo->prepare(
-                'SELECT comptable.id AS id, comptable.nom AS nom, '
-                . 'comptable.prenom AS prenom '
-                . 'FROM comptable '
-                . 'WHERE comptable.login = :unLogin AND comptable.mdp = :unMdp'
-        );
-        $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
-        $requetePrepare->execute();
-        return $requetePrepare->fetch();
-    }
-
     /**
      * Retourne sous forme d'un tableau associatif toutes les lignes de frais
      * hors forfait concernées par les deux arguments.
