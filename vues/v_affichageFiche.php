@@ -134,5 +134,20 @@
                 </tr>
             </table>
     </div>
+     
+     <div class="alert alert-warning" role="alert"> 
+        Prix au kilomètre selon la puissance du véhicule  déclaré auprès des services comptables
+        <ul>
+            <li>(Véhicule  4CV Diesel)          0.52 € / Km</li>
+            <li>(Véhicule 5/6CV Diesel) 	0.58 € / Km</li>
+            <li>(Véhicule  4CV Essence) 	0.62 € / Km</li>
+            <li>(Véhicule 5/6CV Essence) 	0.67 € / Km</li>
+        </ul>
+    </div>
+	
+        
+	
+     
+
     <br /> 
 </div>

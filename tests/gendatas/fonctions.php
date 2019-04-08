@@ -136,7 +136,7 @@ function creationFichesFrais($pdo)
     global $moisDebut; // valeur dans majGSB.php
     $lesVisiteurs = getLesVisiteurs($pdo);
     $moisActuel = getMois(date('d/m/Y'));
-    $moisFin = getMoisPrecedent($moisActuel);
+    $moisFin = $moisActuel;
     foreach ($lesVisiteurs as $unVisiteur) {
         $moisCourant = $moisFin;
         $idVisiteur = $unVisiteur['id'];
