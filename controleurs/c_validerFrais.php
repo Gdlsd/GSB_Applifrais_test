@@ -94,7 +94,20 @@ switch ($action) {
         $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $idMois);
 
         foreach ($lesFraisForfait as $unFraisForfait) {
-            $montantTotal += $unFraisForfait['quantite'] * $unFraisForfait['montant']; // Monant * Quantité pour chaque frais afin de connaitre le montant des frais forfaits
+            
+            //Gestion de l'indemnité kilométrique 
+            //Avec prise en compte de la puissance du véhicule
+            if($unFraisForfait['idfrais'] == 'KM')
+            {
+                $tarifKm = $pdo->getMontantFraisKm($idVisiteur);
+                $montantTotal += $unFraisForfait['quantite'] * $tarifKm;
+            }
+            else
+            {
+                // Montant * Quantité pour chaque frais afin de connaitre le montant des frais forfaits
+                $montantTotal += $unFraisForfait['quantite'] * $unFraisForfait['montant']; 
+            }
+            
         }
 
         //récupération du montant des frais hors forfait
@@ -114,8 +127,8 @@ switch ($action) {
 
 //Affichage liste déroulantes lstVisiteur et lstMois
 $uc = 'validerFrais';
-$lesVisiteurs = $pdo->getLstVisiteurParEtatFiche('CL');
-$lesMois = $pdo->getLesMoisParEtatFiche($idVisiteur, 'CL');
+$lesVisiteurs = $pdo->getLstVisiteurParEtatFiche('CR');
+$lesMois = $pdo->getLesMoisParEtatFiche($idVisiteur, 'CR');
 $moisASelectionner = $idMois;
 include 'vues/v_listeVisiteurs.php';
 

@@ -39,8 +39,26 @@
                 $libelle = $unFraisForfait['libelle'];
                 $montant = $unFraisForfait['montant'];
                 $quantite = $unFraisForfait['quantite'];
+                
+                
+                if($unFraisForfait['idfrais'] == 'KM')
+                {
+                    $typeMoteur = $pdo->getTypeVehiculeFiche($idVisiteur, $idMois);
+                    
+                    if(!$typeMoteur)
+                    {
+                        $typeMoteur = 'par défaut';
+                    }
+                    
+                    $libelle = $libelle . ' (moteur : ' . $typeMoteur . ')';
+                    $montant = $pdo->getMontantFraisKmFiche($idVisiteur, $idMois);
+                }
+                
+                
                 $fraisForfait = $montant * $quantite;
                 $totalFraisForfait += $fraisForfait;
+                
+                
             ?>
         <tr>
             <td><?php echo $libelle ?></td>

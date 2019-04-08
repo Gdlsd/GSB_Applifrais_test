@@ -140,6 +140,7 @@ function creationFichesFrais($pdo)
     foreach ($lesVisiteurs as $unVisiteur) {
         $moisCourant = $moisFin;
         $idVisiteur = $unVisiteur['id'];
+        $idVehiculeVisiteur = getTypeVehicule($idVisiteur, $pdo) ;
         $n = 1;
         while ($moisCourant >= $moisDebut) {
             if ($n == 1) {
@@ -159,9 +160,9 @@ function creationFichesFrais($pdo)
             $dateModif = $numAnnee . '-' . $numMois . '-' . rand(1, 8);
             $nbJustificatifs = rand(0, 12);
             $req = 'insert into fichefrais(idvisiteur,mois,nbjustificatifs,'
-                . 'montantvalide,datemodif,idetat) '
+                . 'montantvalide,datemodif,idetat,idvehicule) '
                 . "values ('$idVisiteur','$moisCourant',$nbJustificatifs,"
-                . "0,'$dateModif','$etat');";
+                . "0,'$dateModif','$etat', '$idVehiculeVisiteur');";
             $pdo->exec($req);
             $moisCourant = getMoisPrecedent($moisCourant);
             $n++;
@@ -344,6 +345,19 @@ function getMois($date)
     return $annee . $mois;
 }
 
+
+function getTypeVehicule($idVisiteur, $pdo)
+{
+    $req = 'SELECT vehicule.id '
+            . 'FROM vehicule JOIN visiteur ON vehicule.id = visiteur.typevehicule '
+            . 'WHERE visiteur.id = \'' . $idVisiteur . '\'';
+    $res = $pdo->query($req);
+    $typeMoteur = $res->fetch();
+
+    return $typeMoteur['id'];
+}
+    
+    
 /**
  * Fonction qui met à jour les montants des fiches de frais (via des UPDATE SQL)
  *
@@ -369,11 +383,35 @@ function majFicheFrais($pdo)
                 . 'from lignefraisforfait, fraisforfait '
                 . 'where lignefraisforfait.idfraisforfait = fraisforfait.id '
                 . "and lignefraisforfait.idvisiteur = '$idVisiteur' "
-                . "and lignefraisforfait.mois = '$mois' ";
+                . "and lignefraisforfait.mois = '$mois' "
+                . "and lignefraisforfait.idfraisforfait <> 'KM'";
         $res = $pdo->query($req);
         $ligne = $res->fetch();
-        $cumulMontantForfait = $ligne['cumul'];
-        $montantEngage = $cumulMontantHF + $cumulMontantForfait;
+        $cumulMontantForfait = $ligne['cumul']; //On a le cumul des frais sans les frais km
+        
+        //récup frais km en fonction de la puissance du véhicule
+        $typeVehicule = getTypeVehicule($idVisiteur, $pdo);
+        
+        $req = 'select vehicule.montant '
+                . 'FROM vehicule JOIN visiteur ON vehicule.id = visiteur.typevehicule '
+                . 'WHERE visiteur.id = \'' . $idVisiteur. '\'';
+        $res = $pdo->query($req);
+                $ligne = $res->fetch();
+                $montantFraisKm = $ligne['montant'];
+        //récup de la quantité de km de la fiche
+        $req = 'select quantite '
+                . 'FROM lignefraisforfait '
+                . 'WHERE idvisiteur = \'' . $idVisiteur . '\' '
+                . 'AND mois = \'' . $mois . '\' '
+                . 'AND idfraisforfait = \'KM\'';
+        $res = $pdo->query($req);
+        $ligne = $res->fetch();
+        $quantiteKm = $ligne['quantite'];
+
+        $montantFraisKm = $montantFraisKm * $quantiteKm;
+                
+        $montantEngage = $cumulMontantHF + $cumulMontantForfait + $montantFraisKm;
+
         $etat = $uneFicheFrais['idetat'];
         if ($etat == 'CR') {
             $montantValide = 0;

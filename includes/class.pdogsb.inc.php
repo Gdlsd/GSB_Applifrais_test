@@ -452,16 +452,19 @@ class PdoGsb
     {
         $dernierMois = $this->dernierMoisSaisi($idVisiteur);
         $laDerniereFiche = $this->getLesInfosFicheFrais($idVisiteur, $dernierMois);
+        $typeMoteur = $this->getTypeVehicule($idVisiteur);
+        
         if ($laDerniereFiche['idEtat'] == 'CR') {
             $this->majEtatFicheFrais($idVisiteur, $dernierMois, 'CL');
         }
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'INSERT INTO fichefrais (idvisiteur,mois,nbjustificatifs,'
-            . 'montantvalide,datemodif,idetat) '
-            . "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR')"
+            . 'montantvalide,datemodif,idetat, idvehicule) '
+            . "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR', :unTypeMoteur)"
         );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unTypeMoteur', $typeMoteur, PDO::PARAM_STR);
         $requetePrepare->execute();
         $lesIdFrais = $this->getLesIdFrais();
         foreach ($lesIdFrais as $unIdFrais) {
@@ -740,4 +743,130 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
+
+    
+    /**
+     * Retourne le type de véhicule enregistré pour un visiteur
+     * @param type $idVisiteur
+     * @return type
+     */
+    public function getTypeVehicule($idVisiteur)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT vehicule.id '
+                . 'FROM vehicule JOIN visiteur ON vehicule.id = visiteur.typevehicule '
+                . 'WHERE visiteur.id = :unVisiteur'
+                );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $typeMoteur = $requetePrepare->fetch();
+        return $typeMoteur['id'];
+    }
+    
+    /**
+     * Retourn le type de véhicule enregistré pour UNE fiche donnée
+     * @param type $idVisiteur
+     * @param type $idMois
+     * @return type
+     */
+        public function getTypeVehiculeFiche($idVisiteur, $idMois)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT idvehicule '
+                . 'FROM fichefrais '
+                . 'WHERE idvisiteur = :unVisiteur AND mois = :unMois'
+                );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $idMois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $typeMoteur = $requetePrepare->fetch();
+    
+        return $typeMoteur['idvehicule'];
+    }
+    
+    /**
+     * Retourne le tarif par défaut des frais kilométriques
+     * enregistrés dans FraisForfaits
+     * @return type
+     */
+    public function getMontantFraisKmDefaut()
+    {
+         $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT montant '
+                . 'FROM fraisforfait '
+                . 'WHERE id = \'KM\''
+                );
+        $requetePrepare->execute();
+        $montant = $requetePrepare->fetch();
+       
+        return $montant['montant'];
+    }
+    
+/**
+ * Récupère le prix unitaire des frais kilométrique en fonction du véhicule du
+ * visiteur. Retourne le montant par défaut si la puissance du véhicule n'est 
+ * pas renseignée
+ * @param type $idVisiteur
+ * @return type
+ */
+    public function getMontantFraisKm($idVisiteur)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT vehicule.montant '
+                . 'FROM vehicule JOIN visiteur ON vehicule.id = visiteur.typevehicule '
+                . 'WHERE visiteur.id = :unVisiteur'
+        );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        
+        //Récupération d'un array contenant :
+        // Un montant en fonction du type de véhicule pour le visiteur
+        // Un montant d'indemnité kilométrique par défaut (table fraisforfait)
+        $tarifKm = $requetePrepare->fetch();
+        
+        //Si le montant retourné n'est pas null, le type du véhicule est renseigné
+        //Retour du montant en question
+        if($tarifKm['montant'])
+        {
+            return $tarifKm['montant'];
+        }
+        return PdoGsb::getMontantFraisKmDefaut();   
+    }
+    
+/**
+ * Récupère le prix unitaire des frais kilométrique en fonction du véhicule du
+ * visiteur pour une fiche donnée. Retourne le montant par défaut si la 
+ * puissance du véhicule n'est pas renseignée
+ * @param type $idVisiteur
+ * @param type $idMois
+ * @return type
+ */
+    public function getMontantFraisKmFiche($idVisiteur, $idMois)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT vehicule.montant '
+                . 'FROM vehicule JOIN fichefrais '
+                . 'ON vehicule.id = fichefrais.idvehicule '
+                . 'WHERE fichefrais.idvisiteur = :unVisiteur '
+                . 'AND fichefrais.mois = :unMois'
+        );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $idMois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        
+        //Récupération d'un array contenant :
+        // Un montant en fonction du type de véhicule pour le visiteur
+        // Un montant d'indemnité kilométrique par défaut (table fraisforfait)
+        $tarifKm = $requetePrepare->fetch();
+        
+        //Si le montant retourné n'est pas null, le type du véhicule est renseigné
+        //Retour du montant en question
+        if($tarifKm['montant'])
+        {
+            return $tarifKm['montant'];
+        }
+        return PdoGsb::getMontantFraisKmDefaut();   
+    }
+    
 }
+
