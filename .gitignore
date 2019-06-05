@@ -6,3 +6,4 @@ composer
 /nbproject/private/
 /nbproject
 /vendor/
+/tests/

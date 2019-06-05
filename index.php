@@ -19,6 +19,7 @@ require_once 'includes/class.pdogsb.inc.php';
 session_start();
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
+
 if(isset($_SESSION['idVisiteur']))
 {
     require 'vues/v_entete.php';
@@ -42,6 +43,7 @@ if ($uc && !$estConnecte) {
     }
     
 }
+
 switch ($uc) {
 case 'connexion':
     include 'controleurs/c_connexion.php';
