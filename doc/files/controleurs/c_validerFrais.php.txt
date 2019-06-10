@@ -34,7 +34,7 @@ switch ($action) {
         }
         break;
 
-    case 'validationFraisHorsForfait' :
+    case 'traiterFraisHorsForfait' :
 
         $idMoisSuivant = getMoisSuivant($idMois);
         $libelle = filter_input(INPUT_POST, 'libelleFraisHf', FILTER_SANITIZE_STRING);
@@ -94,7 +94,20 @@ switch ($action) {
         $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur, $idMois);
 
         foreach ($lesFraisForfait as $unFraisForfait) {
-            $montantTotal += $unFraisForfait['quantite'] * $unFraisForfait['montant']; // Monant * Quantité pour chaque frais afin de connaitre le montant des frais forfaits
+            
+            //Gestion de l'indemnité kilométrique 
+            //Avec prise en compte de la puissance du véhicule
+            if($unFraisForfait['idfrais'] == 'KM')
+            {
+                $tarifKm = $pdo->getMontantFraisKm($idVisiteur);
+                $montantTotal += $unFraisForfait['quantite'] * $tarifKm;
+            }
+            else
+            {
+                // Montant * Quantité pour chaque frais afin de connaitre le montant des frais forfaits
+                $montantTotal += $unFraisForfait['quantite'] * $unFraisForfait['montant']; 
+            }
+            
         }
 
         //récupération du montant des frais hors forfait

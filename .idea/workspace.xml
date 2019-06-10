@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da47b095-2c3c-4a56-99b3-bd10f2394fa0" name="Default Changelist" comment="" />
+    <list default="true" id="da47b095-2c3c-4a56-99b3-bd10f2394fa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/pdogsbTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ppe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ppe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class.pdogsb.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class.pdogsb.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/PdoGsbTestOld.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/gendatas/fonctions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/gendatas/majGSB.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/genhashpwd/hashPwd.php" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,83 +24,22 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="821">
-                    <caret line="134" column="36" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/genhashpwd/hashPwd.php">
+        <entry file="file://$PROJECT_DIR$/tests/pdogsbTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+            <state relative-caret-position="102">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/gendatas/majGSB.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controleurs/c_gererFrais.php">
+        <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controleurs/c_suivrePaiementFiche.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controleurs/c_deconnexion.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controleurs/c_etatFrais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controleurs/c_validerFrais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../suividevosfrais/serveursuivifrais.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="1938">
+              <caret line="134" column="36" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -111,13 +63,23 @@
         <option value="$PROJECT_DIR$/tests/genhashpwd/fonctions.php" />
         <option value="$PROJECT_DIR$/controleurs/c_suivrePaiementFiche.php" />
         <option value="$PROJECT_DIR$/tests/genhashpwd/hashPwd.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/includes/Test.php" />
+        <option value="$PROJECT_DIR$/tests/includes/fctTest.php" />
+        <option value="$PROJECT_DIR$/tests/includes/class.pdogsb.incTest.php" />
+        <option value="$PROJECT_DIR$/tests/class.pdogsb.incTest.php" />
+        <option value="$PROJECT_DIR$/tests/fctTest.php" />
+        <option value="$PROJECT_DIR$/tests/PdoGsbTest.php" />
+        <option value="$PROJECT_DIR$/tests/PdoGsbTestOld.php" />
+        <option value="$PROJECT_DIR$/tests/includes/PdoGsbTest.php" />
+        <option value="$PROJECT_DIR$/tests/pdogsbTest.php" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
@@ -153,33 +115,13 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/kherge/version" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
-      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/graphviz" />
-      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/fileset" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/phpdocumentor" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1128" />
-    <option name="height" value="1047" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -187,14 +129,43 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="applifrais" type="b2602c69:ProjectViewProjectNode" />
+              <item name="applifrais" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="applifrais" type="b2602c69:ProjectViewProjectNode" />
+              <item name="applifrais" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="applifrais" type="b2602c69:ProjectViewProjectNode" />
+              <item name="applifrais" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../suividevosfrais" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit 6+" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\applifrais\tests" />
+      <recent name="C:\wamp64\www\applifrais\tests\includes" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -207,6 +178,36 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.tests">
+    <configuration name="PdoGsbTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="PdoGsbTest" file="$PROJECT_DIR$/tests/PdoGsbTestOld.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="applifrais" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
+    <configuration name="class.pdogsb.inc.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/includes/class.pdogsb.inc.php">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Script.class.pdogsb.inc.php" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.applifrais" />
+      <item itemvalue="PHPUnit.PdoGsbTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.applifrais" />
+        <item itemvalue="PHP Script.class.pdogsb.inc.php" />
+        <item itemvalue="PHPUnit.PdoGsbTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -226,38 +227,103 @@
       <workItem from="1551620098002" duration="602000" />
       <workItem from="1552853289095" duration="1795000" />
       <workItem from="1553191975694" duration="15000" />
+      <workItem from="1556269987619" duration="128000" />
+      <workItem from="1559206913092" duration="109000" />
+      <workItem from="1559293260025" duration="843000" />
+      <workItem from="1559378916425" duration="1180000" />
+      <workItem from="1559380120516" duration="1687000" />
+      <workItem from="1559382702013" duration="470000" />
+      <workItem from="1559383488457" duration="142000" />
+      <workItem from="1559383651171" duration="1049000" />
+      <workItem from="1559384982731" duration="225000" />
+      <workItem from="1559385229290" duration="663000" />
+      <workItem from="1559385918802" duration="784000" />
+      <workItem from="1559464121701" duration="2252000" />
+      <workItem from="1559551252651" duration="3940000" />
+      <workItem from="1559555278811" duration="861000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="tests - 2019.06.03 at 11h 38m 06s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 38m 33s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 43m 31s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 43m 59s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 44m 00s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 44m 29s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 46m 24s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 48m 20s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 11h 54m 23s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests - 2019.06.03 at 12h 01m 34s.xml">
+      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6523000" />
+    <option name="totallyTimeSpent" value="20856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1128" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="814" height="867" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26498127" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3580902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32833788" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39782017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32833788" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/applifrais$tests.xml" NAME="tests Coverage Results" MODIFIED="1559464755514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/includes/fct.inc.php">
@@ -266,20 +332,37 @@
     <entry file="file://$PROJECT_DIR$/controleurs/c_connexion.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/gendatas/majGSB.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/genhashpwd/fonctions.php">
+    <entry file="file://$PROJECT_DIR$/tests/genhashpwd/fonctions.php" />
+    <entry file="file://$PROJECT_DIR$/../suividevosfrais/serveursuivifrais.php" />
+    <entry file="file://$PROJECT_DIR$/tests/genhashpwd/hashPwd.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="986">
+          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/gendatas/majGSB.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Test.php" />
     <entry file="file://$PROJECT_DIR$/controleurs/c_gererFrais.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -291,36 +374,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controleurs/c_etatFrais.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="411">
           <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controleurs/c_validerFrais.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
+        <state relative-caret-position="411">
           <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../suividevosfrais/serveursuivifrais.php">
+    <entry file="file://$PROJECT_DIR$/tests/fctTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/PdoGsbTestOld.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/includes/PdoGsbTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
+        <state relative-caret-position="1938">
           <caret line="134" column="36" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/genhashpwd/hashPwd.php">
+    <entry file="file://$PROJECT_DIR$/tests/pdogsbTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>

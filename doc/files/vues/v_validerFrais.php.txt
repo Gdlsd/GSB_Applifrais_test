@@ -75,7 +75,7 @@
 
                             <tr>
                         <form method="post" 
-                              action="index.php?uc=validerFrais&action=validationFraisHorsForfait" 
+                              action="index.php?uc=validerFrais&action=traiterFraisHorsForfait" 
                               role="form">
                             <input name="lstVisiteurs" value="<?php echo $idVisiteur; ?>" 
                                    type="hidden">

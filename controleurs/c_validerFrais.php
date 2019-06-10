@@ -71,7 +71,7 @@ switch ($action) {
         } else {
             $pdo->refusLigneFraisHF($idFrais);                                  //La valeur refus de la ligne prend la valeur 1
             $libelleRefus = substr('REFUSE : ' . $libelle, 0, 40);              //Création du nouveau libellé en ajoutant REFUSE : et en limitant la chaine à 40 caractères
-            $pdo->majLigneFraisHorsForfait($idFrais, $idVisiteur, $idMois, //Mise à jour de la ligne de frais avec le nouveau libellé
+            $pdo->majLigneFraisHorsForfait($idFrais, $idVisiteur, $idMois,      //Mise à jour de la ligne de frais avec le nouveau libellé
                     $libelleRefus, $dateFrais, $montant);
             ajouterSucces('Les frais pour "' . $libelle . '" on été refusés');  //Un message indique que les frais ont été refusé
             include 'vues/v_succes.php';

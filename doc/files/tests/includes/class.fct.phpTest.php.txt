@@ -1,0 +1,149 @@
+<?php
+
+require '..\includes\fct.inc.php';
+
+class fctTest extends PHPUnit\Framework\TestCase {
+
+    /**
+     * @var fct
+     */
+    protected $object;
+
+    /**
+     * Sets up the fixture, for example, opens a network connection.
+     * This method is called before a test is executed.
+     */
+    protected function setUp() {
+        $this->object = fct::class;
+    }
+
+    /**
+     * Tears down the fixture, for example, closes a network connection.
+     * This method is called after a test is executed.
+     */
+    protected function tearDown() {
+        
+    }
+    
+    /**
+     * @covers fct::dateFrancaisVersAnglais
+     * @todo   Implement testDateFrancaisVersAnglais().
+     */
+    public function testDateFrancaisVersAnglais() {
+        $date1 = '02/02/2002';
+        $date2 = '04/01/2019';
+        $this->assertEquals('2002-02-02', dateFrancaisVersAnglais($date1));
+        $this->assertEquals('2019-01-04', dateFrancaisVersAnglais($date2));
+    }
+
+    /**
+     * @covers fct::dateActuelle
+     * @todo   Implement testDateActuelle().
+     */
+    public function testDateActuelle() {
+        // Remove the following lines when you implement this test.
+        $this->assertEquals(date('Y-m-d'), dateActuelle());
+    }
+
+    /**
+     * @covers fct::dateAnglaisVersFrancais
+     * @todo   Implement testDateAnglaisVersFrancais().
+     */
+    public function testDateAnglaisVersFrancais() {
+        $date1 = '2002-02-02';
+        $date2 = '2019-01-04';
+        $this->assertEquals('02/02/2002', dateAnglaisVersFrancais($date1));
+        $this->assertEquals('04/01/2019', dateAnglaisVersFrancais($date2));
+    }
+
+    /**
+     * @covers fct::getMois
+     * @todo   Implement testGetMois().
+     */
+    public function testGetMois() {
+        $date1 = '01/02/2018';
+        $date2 = '02/03/2019';
+        $date3= '04/07/2015';
+        $this->assertEquals('201802', getMois($date1), 'Le mois et la date sont mal formatés');
+        $this->assertEquals('201903', getMois($date2), 'Le mois et la date sont mal formatés');
+        $this->assertEquals('201507', getMois($date3), 'Le mois et la date sont mal formatés');
+    }
+
+    /**
+     * @covers fct::getMoisSuivant
+     * @todo   Implement testGetMoisSuivant().
+     */
+    public function testGetMoisSuivant() {
+        $date1 = '201802';
+        $date2 = '201810';
+        $date3= '201812';
+        
+        $this->assertEquals('201803', getMoisSuivant($date1), 'Le mois retourné ne correspond pas au mois suivant');
+        $this->assertEquals('201811', getMoisSuivant($date2), 'Le mois retourné ne correspond pas au mois suivant');
+        $this->assertEquals('201901', getMoisSuivant($date3), 'Le mois retourné ne correspond pas au mois suivant');
+    }
+
+    /**
+     * @covers fct::estEntierPositif
+     * @todo   Implement testEstEntierPositif().
+     */
+    public function testEstEntierPositif() {
+        // Remove the following lines when you implement this test.
+        $nb1 = 1;
+        $nb2 = 1.2356;
+        $nb3 = -3;
+        $nb4 = -4.258;
+        
+        $this->assertEquals(true, estEntierPositif($nb1), 'Erreur : la fonction doit retourner true pour nb = 1');
+        $this->assertEquals(false, estEntierPositif($nb2), 'Erreur : 1.2356 n\'est pas un entier');
+        $this->assertEquals(false, estEntierPositif($nb3), 'Erreur : -3 n\'est pas positif');
+        $this->assertEquals(false, estEntierPositif($nb4), 'Erreur : -4.258 n\'est ni entier ni positif');
+    }
+
+    /**
+     * @covers fct::estTableauEntiers
+     * @todo   Implement testEstTableauEntiers().
+     */
+    public function testEstTableauEntiers() {
+        $arrayString = explode(" ", "Ceci est un tableau de chaine");
+        $arrayMix = [0, 1, 2, 3, 4, 5, 6, 7, "Surprise !"];
+        $arrayInt = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+        
+        $this->assertEquals(false, estTableauEntiers($arrayString), 'Erreur : $arrayString n\'est pas un tableau d\'entier');
+        $this->assertEquals(false, estTableauEntiers($arrayMix), 'Erreur, $arrayMix ne contient pas que des entiers');
+        $this->assertEquals(true, estTableauEntiers($arrayInt), 'Erreur : $arrayInt est un tableau d\'entiers');
+        
+    }
+
+    /**
+     * @covers fct::estDateDepassee
+     * @todo   Implement testEstDateDepassee().
+     * Vérifie si une date est inférieure d'un an à la date actuelle
+     */
+    public function testEstDateDepassee() {
+        $date1 = date('d/m/Y'); //Date actuelle
+        $date2 = '01/02/2005';
+        $date3 = '01/11/2018';
+        $date4 = '04/05/2189';
+        
+        $this->assertEquals(false, estDateDepassee($date1), 'Erreur : la date actuelle ne doit pas être considérée comme dépassée');
+        $this->assertEquals(true, estDateDepassee($date2), 'Erreur : la date est antérieure d\'un an à la date actuelle');
+        $this->assertEquals(false, estDateDepassee($date4), 'Erreur : la date est supérieure à la date actuelle');
+    }
+
+    /**
+     * @covers fct::estDateValide
+     * @todo   Implement testEstDateValide().
+     */
+    public function testEstDateValide() {
+        $date1 = '01/01/2001';
+        $date2 = '01-01-2001';
+        $date3 = '2001-01-01';
+        
+        $this->assertEquals(true, estDateValide($date1), 'Le format de la date doit etre valide');
+        $this->assertEquals(false, estDateValide($date2), 'Le format de la date ne doit pas être valide');
+        $this->assertEquals(false, estDateValide($date3), 'Le format de la date ne doit pas être valide');
+    }
+
+}
+

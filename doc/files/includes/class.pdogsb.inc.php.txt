@@ -26,8 +26,8 @@ class PdoGsb
 {
     private static $serveur = 'mysql:host=localhost';
     private static $bdd = 'dbname=gsb_frais';
-    private static $user = 'userGsb';
-    private static $mdp = 'secret';
+    private static $user = 'root';
+    private static $mdp = '';
     private static $monPdo;
     private static $monPdoGsb = null;
 
@@ -53,7 +53,7 @@ class PdoGsb
     {
         PdoGsb::$monPdo = null;
     }
-
+    
     /**
      * Fonction statique qui crée l'unique instance de la classe
      * Appel : $instancePdoGsb = PdoGsb::getPdoGsb();
@@ -80,15 +80,56 @@ class PdoGsb
     {
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT visiteur.id AS id, visiteur.nom AS nom, '
-            . 'visiteur.prenom AS prenom '
+            . 'visiteur.prenom AS prenom, visiteur.mdp AS mdp '
             . 'FROM visiteur '
-            . 'WHERE visiteur.login = :unLogin AND visiteur.mdp = :unMdp'
+            . 'WHERE visiteur.login = :unLogin'
         );
         $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
+       // $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
         $requetePrepare->execute();
-        return $requetePrepare->fetch();
+                
+        $ligne = $requetePrepare->fetch();
+        
+        if(password_verify($mdp, $ligne['mdp']))
+        {   
+            return $ligne;
+        }
+        else
+        {
+            return null;
+        }
     }
+    
+    /**
+     * Retourne les informations d'un comptable
+     *
+     * @param String $login Login du comptable
+     * @param String $mdp   Mot de passe du comptable
+     *
+     * @return tableau contenant l'id, le nom et le prénom
+     */
+    public function getInfosComptable($login, $mdp)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT comptable.id AS id, comptable.nom AS nom, '
+                . 'comptable.prenom AS prenom, comptable.mdp AS mdp '
+                . 'FROM comptable '
+                . 'WHERE comptable.login = :unLogin'
+        );
+        $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $ligne = $requetePrepare->fetch();
+        
+        if(password_verify($mdp, $ligne['mdp']))
+        {
+            return $ligne;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
     
     /**
      * Retourne une liste de nom et prénoms de l'ensemble des visiteurs
@@ -96,8 +137,7 @@ class PdoGsb
     public function getListeVisiteur()
     {
         $requete = PdoGsb::$monPdo->query(
-            'SELECT visiteur.id AS id, visiteur.nom AS nom,'
-            . 'visiteur.prenom AS prenom '
+            'SELECT * '
             . ' FROM visiteur'
             );
         return $requete->fetchAll();
@@ -157,29 +197,6 @@ class PdoGsb
         return $requetePrepare->fetchAll();
     }
     
-    /**
-     * Retourne les informations d'un comptable
-     *
-     * @param String $login Login du comptable
-     * @param String $mdp   Mot de passe du comptable
-     *
-     * @return tableau contenant l'id, le nom et le prénom
-     */
-    public function getInfosComptable($login, $mdp)
-    {
-     
-        $requetePrepare = PdoGsb::$monPdo->prepare(
-                'SELECT comptable.id AS id, comptable.nom AS nom, '
-                . 'comptable.prenom AS prenom '
-                . 'FROM comptable '
-                . 'WHERE comptable.login = :unLogin AND comptable.mdp = :unMdp'
-        );
-        $requetePrepare->bindParam(':unLogin', $login, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMdp', $mdp, PDO::PARAM_STR);
-        $requetePrepare->execute();
-        return $requetePrepare->fetch();
-    }
-
     /**
      * Retourne sous forme d'un tableau associatif toutes les lignes de frais
      * hors forfait concernées par les deux arguments.
@@ -435,16 +452,19 @@ class PdoGsb
     {
         $dernierMois = $this->dernierMoisSaisi($idVisiteur);
         $laDerniereFiche = $this->getLesInfosFicheFrais($idVisiteur, $dernierMois);
+        $typeMoteur = $this->getTypeVehicule($idVisiteur);
+        
         if ($laDerniereFiche['idEtat'] == 'CR') {
             $this->majEtatFicheFrais($idVisiteur, $dernierMois, 'CL');
         }
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'INSERT INTO fichefrais (idvisiteur,mois,nbjustificatifs,'
-            . 'montantvalide,datemodif,idetat) '
-            . "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR')"
+            . 'montantvalide,datemodif,idetat, idvehicule) '
+            . "VALUES (:unIdVisiteur,:unMois,0,0,now(),'CR', :unTypeMoteur)"
         );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unTypeMoteur', $typeMoteur, PDO::PARAM_STR);
         $requetePrepare->execute();
         $lesIdFrais = $this->getLesIdFrais();
         foreach ($lesIdFrais as $unIdFrais) {
@@ -631,7 +651,7 @@ class PdoGsb
             . 'FROM fichefrais '
             . 'INNER JOIN etat ON fichefrais.idetat = etat.id '
             . 'WHERE fichefrais.idvisiteur = :unIdVisiteur '
-            . 'AND fichefraistableau contenant.mois = :unMois'
+            . 'AND fichefrais.mois = :unMois'
         );
         $requetePrepare->bindParam(':unIdVisiteur', $idVisiteur, PDO::PARAM_STR);
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
@@ -723,5 +743,131 @@ class PdoGsb
         $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
         $requetePrepare->execute();
     }
+
+    
+    /**
+     * Retourne le type de véhicule enregistré pour un visiteur
+     * @param type $idVisiteur
+     * @return type
+     */
+    public function getTypeVehicule($idVisiteur)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT vehicule.id '
+                . 'FROM vehicule JOIN visiteur ON vehicule.id = visiteur.typevehicule '
+                . 'WHERE visiteur.id = :unVisiteur'
+                );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $typeMoteur = $requetePrepare->fetch();
+        return $typeMoteur['id'];
+    }
+    
+    /**
+     * Retourn le type de véhicule enregistré pour UNE fiche donnée
+     * @param type $idVisiteur
+     * @param type $idMois
+     * @return type
+     */
+        public function getTypeVehiculeFiche($idVisiteur, $idMois)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT idvehicule '
+                . 'FROM fichefrais '
+                . 'WHERE idvisiteur = :unVisiteur AND mois = :unMois'
+                );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $idMois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $typeMoteur = $requetePrepare->fetch();
+    
+        return $typeMoteur['idvehicule'];
+    }
+    
+    /**
+     * Retourne le tarif par défaut des frais kilométriques
+     * enregistrés dans FraisForfaits
+     * @return type
+     */
+    public function getMontantFraisKmDefaut()
+    {
+         $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT montant '
+                . 'FROM fraisforfait '
+                . 'WHERE id = \'KM\''
+                );
+        $requetePrepare->execute();
+        $montant = $requetePrepare->fetch();
+       
+        return $montant['montant'];
+    }
+    
+/**
+ * Récupère le prix unitaire des frais kilométrique en fonction du véhicule du
+ * visiteur. Retourne le montant par défaut si la puissance du véhicule n'est 
+ * pas renseignée
+ * @param type $idVisiteur
+ * @return type
+ */
+    public function getMontantFraisKm($idVisiteur)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT vehicule.montant '
+                . 'FROM vehicule JOIN visiteur ON vehicule.id = visiteur.typevehicule '
+                . 'WHERE visiteur.id = :unVisiteur'
+        );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        
+        //Récupération d'un array contenant :
+        // Un montant en fonction du type de véhicule pour le visiteur
+        // Un montant d'indemnité kilométrique par défaut (table fraisforfait)
+        $tarifKm = $requetePrepare->fetch();
+        
+        //Si le montant retourné n'est pas null, le type du véhicule est renseigné
+        //Retour du montant en question
+        if($tarifKm['montant'])
+        {
+            return $tarifKm['montant'];
+        }
+        return PdoGsb::getMontantFraisKmDefaut();   
+    }
+    
+/**
+ * Récupère le prix unitaire des frais kilométrique en fonction du véhicule du
+ * visiteur pour une fiche donnée. Retourne le montant par défaut si la 
+ * puissance du véhicule n'est pas renseignée
+ * @param type $idVisiteur
+ * @param type $idMois
+ * @return type
+ */
+    public function getMontantFraisKmFiche($idVisiteur, $idMois)
+    {
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+                'SELECT vehicule.montant '
+                . 'FROM vehicule JOIN fichefrais '
+                . 'ON vehicule.id = fichefrais.idvehicule '
+                . 'WHERE fichefrais.idvisiteur = :unVisiteur '
+                . 'AND fichefrais.mois = :unMois'
+        );
+        $requetePrepare->bindParam(':unVisiteur', $idVisiteur, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $idMois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        
+        //Récupération d'un array contenant :
+        // Un montant en fonction du type de véhicule pour le visiteur
+        // Un montant d'indemnité kilométrique par défaut (table fraisforfait)
+        $tarifKm = $requetePrepare->fetch();
+        
+        //Si le montant retourné n'est pas null, le type du véhicule est renseigné
+        //Retour du montant en question
+        if($tarifKm['montant'])
+        {
+            return $tarifKm['montant'];
+        }
+        return PdoGsb::getMontantFraisKmDefaut();   
+    }
+    
 }
+
 

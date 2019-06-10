@@ -27,6 +27,7 @@ switch ($action) {
             if ($pdo->estPremierFraisMois($idVisiteur, $mois)) {
                 $pdo->creeNouvellesLignesFrais($idVisiteur, $mois);
             }
+            $infosFiche = $pdo->getLesInfosFicheFrais($idVisiteur, $mois);
         break;
     case 'validerMajFraisForfait':
         $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT, FILTER_FORCE_ARRAY);
